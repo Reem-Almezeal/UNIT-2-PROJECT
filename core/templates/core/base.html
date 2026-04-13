@@ -1,0 +1,179 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}KsaFuture{% endblock %}</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+
+    <div class="bg-glow glow-top-left"></div>
+    <div class="bg-glow glow-bottom-right"></div>
+    <div class="grid-overlay"></div>
+
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg futuristic-navbar">
+            <div class="container">
+
+                <a class="navbar-brand logo-text" href="{% url 'core:home' %}">
+                    <span class="logo-ksa">Ksa</span><span class="logo-future">Future</span>
+                </a>
+
+                <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link translate-text" href="{% url 'core:home' %}"
+                            data-en="Home" data-ar="الرئيسية">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link translate-text" href="{% url 'core:cities' %}"
+                            data-en="Cities" data-ar="المدن">CITIES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link translate-text" href="{% url 'core:tourism' %}"
+                            data-en="Tourism" data-ar="السياحة">Tourism</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link translate-text" href="{% url 'core:transport' %}"
+                            data-en="Transport" data-ar="التنقل">Transport</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link translate-text" href="{% url 'core:events' %}"
+                            data-en="Events" data-ar="الاحداث">Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link translate-text" href="{% url 'core:technology' %}"
+                            data-en="Technology" data-ar="التقنية">Technology</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link translate-text" href="{% url 'core:ai_assistant' %}"
+                            data-en="AI Assistant" data-ar="المساعد الذكي">AI Assistant</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav-actions">
+                        <button id="theme-toggle" class="action-btn" type="button" aria-label="Toggle theme">
+                            <i class="fa-solid fa-moon"></i>
+                        </button>
+                        <button id="lang-toggle" class="action-btn lang-btn" type="button" aria-label="Toggle language">
+                            AR
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <main class="site-main">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-glow footer-glow-left"></div>
+        <div class="footer-glow footer-glow-right"></div>
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                <h2>Ksa<span>Future</span></h2>
+                <p class="translate-text"
+                data-en="A futuristic digital journey through Saudi Arabia’s smart cities, tourism, technology, sports, and lifestyle."
+                data-ar="رحلة رقمية مستقبلية عبر المدن الذكية والسياحة والتقنية والرياضة ونمط الحياة في المملكة العربية السعودية.">
+                    A futuristic digital journey through Saudi Arabia’s smart cities, tourism, technology, sports, and lifestyle.
+                </p>
+
+                <div class="footer-socials">
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4 class="translate-text" data-en="Explore" data-ar="استكشف">Explore</h4>
+                <ul>
+                    <li><a class="translate-text" href="{% url 'core:home' %}" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                    <li><a class="translate-text" href="{% url 'core:cities' %}" data-en="Cities" data-ar="المدن">Cities</a></li>
+                    <li><a class="translate-text" href="{% url 'core:tourism' %}" data-en="Tourism" data-ar="السياحة">Tourism</a></li>
+                    <li><a class="translate-text" href="{% url 'core:transport' %}" data-en="Transport" data-ar="التنقل">Transport</a></li>
+                    <li><a class="translate-text" href="{% url 'core:events' %}" data-en="Events" data-ar="الاحداث">Events</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4 class="translate-text" data-en="Future" data-ar="المستقبل">Future</h4>
+                <ul>
+                    <li><a class="translate-text" href="{% url 'core:technology' %}" data-en="Technology" data-ar="التقنية">Technology</a></li>
+                    <li><a class="translate-text" href="{% url 'core:ai_assistant' %}" data-en="AI Assistant" data-ar="المساعد الذكي">AI Assistant</a></li>
+                    <li><a class="translate-text" href="#" data-en="Vision 2030" data-ar="رؤية 2030">Vision 2030</a></li>
+                    <li><a class="translate-text" href="#" data-en="Smart Cities" data-ar="المدن الذكية">Smart Cities</a></li>
+                    <li><a class="translate-text" href="#" data-en="Innovation" data-ar="الابتكار">Innovation</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4 class="translate-text" data-en="Get in Touch" data-ar="تواصل معنا">Get in Touch</h4>
+                <p class="translate-text" data-en="Let’s build the future together." data-ar="لنصنع المستقبل معًا.">Let’s build the future together.</p>
+
+                <a href="mailto:hello@ksafuture.com" class="footer-email">
+                    hello@ksafuture.com
+                </a>
+
+                <a href="{% url 'core:contact' %}" class="footer-btn">
+                    <span class="translate-text" data-en="Contact Us" data-ar="تواصل معنا">Contact Us</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="translate-text"
+            data-en="© 2026 KsaFuture. All Rights Reserved."data-ar="© 2026 KsaFuture. جميع الحقوق محفوظة.">
+                © 2026 KsaFuture. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.min.js"></script>
+
+    <script src="{% static 'js/main.js' %}"></script>
+
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

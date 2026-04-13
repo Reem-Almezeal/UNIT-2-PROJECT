@@ -1,0 +1,756 @@
+<!--
+Home Page
+
+Main landing page of the KsaFuture website.
+
+This page presents Saudi Arabia in 2034 through a futuristic and
+interactive interface inspired by Vision 2030.
+
+Sections:
+    - Hero section
+    - Vision section
+    - Future categories section
+    - Featured projects section
+    - Statistics section
+    - Timeline section
+    - Interactive map section
+
+Features:
+    - Arabic and English translation support
+    - Responsive design for all screen sizes
+    - Dark mode support
+    - Scroll reveal animations
+    - Interactive cards and buttons
+-->
+
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Home | KsaFuture{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<section class="home-main" id="homeMain">
+    <div class="container">
+        <div class="home-hero-modern">
+            <div class="home-hero-video-wrap">
+                <video class="home-hero-video" autoplay muted loop playsinline preload="metadata">
+                    <source src="{% static 'videos/future_city.mp4' %}" type="video/mp4">
+                </video>
+                <div class="home-hero-video-overlay"></div>
+            </div>
+
+            <div class="home-hero-inner">
+                <span class="home-label translate-text"
+                    data-en="SAUDI ARABIA IN 2034"
+                    data-ar="المملكة العربية السعودية في 2034">
+                    SAUDI ARABIA IN 2034
+                </span>
+
+                <h1 class="home-title">
+                    <span class="translate-text"
+                        data-en="We Dreamed of"
+                        data-ar="حلمنا بالمستقبل...">
+                        We Dreamed of
+                    </span>
+                    <span class="translate-text"
+                        data-en="the Future..."
+                        data-ar="فصنعناه">
+                        the Future...
+                    </span>
+                    <span class="translate-text"
+                        data-en="And Built It"
+                        data-ar="">
+                        And Built It
+                    </span>
+                </h1>
+
+                <p class="home-subtitle">
+                    <span class="translate-text"
+                        data-en="By 2034, Saudi Arabia has become a global model where smart cities, advanced technology, and quality of life come together in one reality."
+                        data-ar="بحلول عام 2034، أصبحت المملكة نموذجًا عالميًا يجمع بين المدن الذكية، والتقنية المتقدمة، وجودة الحياة في واقع واحد.">
+                        By 2034, Saudi Arabia has become a global model where smart cities, advanced technology, and quality of life come together in one reality.
+                    </span>
+                </p>
+
+                <div class="home-buttons">
+                    <a href="#future-map"
+                       class="primary-btn translate-text"
+                       data-en="Explore the Kingdom"
+                       data-ar="استكشف المملكة">
+                        Explore the Kingdom
+                    </a>
+                    <a href="#vision-section" 
+                                class="secondary-btn video-open-btn translate-text"
+                                data-en="Watch the Vision"
+                                data-ar="شاهد الرؤية">
+                            Watch the Vision
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="moving-strip-section">
+    <div class="moving-strip">
+        <div class="moving-track">
+            <span class="translate-text" data-en="VISION 2030 IMPACT" data-ar="أثر رؤية 2030">VISION 2030 IMPACT</span>
+            <span class="translate-text" data-en="WORLD CUP 2034" data-ar="كأس العالم 2034">WORLD CUP 2034</span>
+            <span class="translate-text" data-en="AI ASSISTANT" data-ar="المساعد الذكي">AI ASSISTANT</span>
+            <span class="translate-text" data-en="NEOM" data-ar="نيوم">NEOM</span>
+            <span class="translate-text" data-en="SMART MOBILITY" data-ar="التنقل الذكي">SMART MOBILITY</span>
+            <span class="translate-text" data-en="GLOBAL EVENTS" data-ar="الفعاليات العالمية">GLOBAL EVENTS</span>
+            <span class="translate-text" data-en="DIGITAL LIFESTYLE" data-ar="نمط الحياة الرقمي">DIGITAL LIFESTYLE</span>
+            <span class="translate-text" data-en="CONNECTED FUTURE" data-ar="مستقبل مترابط">CONNECTED FUTURE</span>
+
+            <span class="translate-text" data-en="VISION 2030 IMPACT" data-ar="أثر رؤية 2030">VISION 2030 IMPACT</span>
+            <span class="translate-text" data-en="WORLD CUP 2034" data-ar="كأس العالم 2034">WORLD CUP 2034</span>
+            <span class="translate-text" data-en="AI ASSISTANT" data-ar="المساعد الذكي">AI ASSISTANT</span>
+            <span class="translate-text" data-en="NEOM" data-ar="نيوم">NEOM</span>
+            <span class="translate-text" data-en="SMART MOBILITY" data-ar="التنقل الذكي">SMART MOBILITY</span>
+            <span class="translate-text" data-en="GLOBAL EVENTS" data-ar="الفعاليات العالمية">GLOBAL EVENTS</span>
+            <span class="translate-text" data-en="DIGITAL LIFESTYLE" data-ar="نمط الحياة الرقمي">DIGITAL LIFESTYLE</span>
+            <span class="translate-text" data-en="CONNECTED FUTURE" data-ar="مستقبل مترابط">CONNECTED FUTURE</span>
+        </div>
+    </div>
+</section>
+
+<section class="vision-section" id="vision-section">
+    <div class="container">
+        <div class="vision-grid">
+            <div class="vision-media reveal-left">
+                <img src="{% static 'images/vision-quote.png' %}" alt="Saudi Vision">
+                <div class="vision-media-overlay"></div>
+            </div>
+
+            <div class="vision-content reveal-right">
+                <span class="section-label green-label translate-text"
+                      data-en="FROM VISION TO REALITY"
+                      data-ar="من الرؤية إلى الواقع">
+                    FROM VISION TO REALITY
+                </span>
+
+                <h2 class="vision-title translate-text"
+                    data-en="The Vision That Changed the Kingdom’s Direction"
+                    data-ar="الرؤية التي غيّرت مسار المملكة">
+                    The Vision That Changed the Kingdom’s Direction
+                </h2>
+
+                <blockquote class="vision-quote translate-text"
+                            data-en="Our ambition is for Saudi Arabia to be a pioneering and successful global model of excellence on all fronts."
+                            data-ar="طموحنا أن تكون السعودية نموذجًا عالميًا رائدًا وناجحًا في التميز على جميع الأصعدة.">
+                    Our ambition is for Saudi Arabia to be a pioneering and successful global model of excellence on all fronts.
+                </blockquote>
+
+                <p class="vision-description">
+                    <span class="translate-text"
+                          data-en="What began as a strategic national vision became the foundation for a complete transformation."
+                          data-ar="ما بدأ كرؤية وطنية استراتيجية أصبح الأساس لتحول شامل.">
+                        What began as a strategic national vision became the foundation for a complete transformation.
+                    </span>
+                    <span class="translate-text"
+                          data-en="In 2034, the results are visible everywhere: more dynamic cities, broader economic opportunity, world-class experiences, and stronger digital systems."
+                          data-ar="في عام 2034 أصبحت النتائج واضحة في كل مكان: مدن أكثر حيوية، وفرص اقتصادية أوسع، وتجارب عالمية المستوى، وأنظمة رقمية أقوى.">
+                          In 2034, the results are visible everywhere: more dynamic cities, broader economic opportunity, world-class experiences, and stronger digital systems.
+                    </span>
+                    <span class="translate-text"
+                          data-en="The Kingdom now reflects a society shaped by confidence, innovation, and global relevance."
+                          data-ar="تعكس المملكة اليوم مجتمعًا تشكله الثقة والابتكار والحضور العالمي.">
+                        The Kingdom now reflects a society shaped by confidence, innovation, and global relevance.
+                    </span>
+                </p>
+
+                <div class="vision-author translate-text"
+                     data-en="Crown Prince Mohammed bin Salman"
+                     data-ar="ولي العهد الأمير محمد بن سلمان">
+                    Crown Prince Mohammed bin Salman
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="categories-section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="section-label translate-text"
+                  data-en="EXPLORE THE KINGDOM"
+                  data-ar="استكشف المملكة">
+                EXPLORE THE KINGDOM
+            </span>
+
+            <h2 class="section-title-main translate-text"
+                data-en="The Future Experience"
+                data-ar="تجربة المستقبل">
+                The Future Experience
+            </h2>
+
+            <p class="section-desc">
+                <span class="translate-text"
+                      data-en="In 2034, every major sector now carries the visible impact of Vision 2030."
+                      data-ar="في عام 2034، أصبح كل قطاع رئيسي يحمل الأثر الواضح لرؤية 2030.">
+                    In 2034, every major sector now carries the visible impact of Vision 2030.
+                </span>
+                <span class="translate-text"
+                      data-en="Explore the systems, destinations, and experiences that define the Kingdom today."
+                      data-ar="استكشف الأنظمة والوجهات والتجارب التي تُعرّف المملكة اليوم.">
+                    Explore the systems, destinations, and experiences that define the Kingdom today.
+                </span>
+            </p>
+        </div>
+
+        <div class="categories-grid">
+
+            <div class="future-card reveal-up">
+                <div class="future-card-icon">
+                    <i class="fa-solid fa-city"></i>
+                </div>
+                <div class="future-card-glow"></div>
+
+                <h3 class="translate-text" data-en="Cities" data-ar="المدن">Cities</h3>
+
+                <p>
+                    <span class="translate-text"
+                          data-en="Saudi cities now deliver more efficient urban life through smarter districts."
+                          data-ar="توفر المدن السعودية اليوم حياة حضرية أكثر كفاءة من خلال أحياء أكثر ذكاءً.">
+                        Saudi cities now deliver more efficient urban life through smarter districts.
+                    </span>
+                    <span class="translate-text"
+                          data-en="They offer better infrastructure and more connected public services."
+                          data-ar="كما تقدم بنية تحتية أفضل وخدمات عامة أكثر ترابطًا.">
+                        They offer better infrastructure and more connected public services.
+                    </span>
+                </p>
+
+                <a href="{% url 'core:cities' %}"
+                   class="future-card-btn translate-text"
+                   data-en="Explore"
+                   data-ar="استكشف">
+                    Explore
+                </a>
+            </div>
+
+            <div class="future-card reveal-up">
+                <div class="future-card-icon">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                </div>
+                <div class="future-card-glow"></div>
+
+                <h3 class="translate-text" data-en="Tourism" data-ar="السياحة">Tourism</h3>
+
+                <p><span class="translate-text"
+                          data-en="The Kingdom now offers a complete tourism story."
+                          data-ar="تقدم المملكة اليوم تجربة سياحية متكاملة.">
+                        The Kingdom now offers a complete tourism story.
+                    </span>
+                    <span class="translate-text"
+                          data-en="It brings together heritage, culture, luxury destinations, and immersive experiences."
+                          data-ar="فهي تجمع بين التراث والثقافة والوجهات الفاخرة والتجارب الغامرة.">
+                        It brings together heritage, culture, luxury destinations, and immersive experiences.
+                    </span>
+                </p>
+
+                <a href="{% url 'core:tourism' %}"
+                   class="future-card-btn translate-text"
+                   data-en="Explore"
+                   data-ar="استكشف">
+                    Explore
+                </a>
+            </div>
+
+            <div class="future-card reveal-up">
+                <div class="future-card-icon">
+                    <i class="fa-solid fa-train-subway"></i>
+                </div>
+                <div class="future-card-glow"></div>
+
+                <h3 class="translate-text" data-en="Transport" data-ar="التنقل">Transport</h3>
+
+                <p>
+                    <span class="translate-text"
+                          data-en="Mobility has become faster, cleaner, and smarter across the Kingdom."
+                          data-ar="أصبح التنقل في أنحاء المملكة أسرع وأنظف وأكثر ذكاءً.">
+                        Mobility has become faster, cleaner, and smarter across the Kingdom.
+                    </span>
+                    <span class="translate-text"
+                          data-en="Expanded metro systems, rail networks, and intelligent transport now shape movement."
+                          data-ar="أصبحت شبكات المترو والقطارات ووسائل النقل الذكية تشكل أسلوب التنقل اليوم.">
+                        Expanded metro systems, rail networks, and intelligent transport now shape movement.
+                    </span>
+                </p>
+
+                <a href="{% url 'core:transport' %}"
+                   class="future-card-btn translate-text"
+                   data-en="Explore"
+                   data-ar="استكشف">
+                    Explore
+                </a>
+            </div>
+
+            <div class="future-card reveal-up">
+                <div class="future-card-icon">
+                    <i class="fa-solid fa-calendar-"></i>
+                </div>
+                <div class="future-card-glow"></div>
+
+                <h3 class="translate-text" data-en="Events" data-ar="الاحداث">Events</h3>
+
+                <p>
+                    <span class="translate-text"
+                          data-en="Saudi Arabia now hosts major international events and cultural festivals."
+                          data-ar="تستضيف المملكة العربية السعودية اليوم احداث دولية كبرى ومهرجانات ثقافية.">
+                        Saudi Arabia now hosts major international events and cultural festivals.
+                    </span>
+                    <span class="translate-text"
+                          data-en="Entertainment seasons and world-stage experiences now extend across the Kingdom."
+                          data-ar="وأصبحت مواسم الترفيه والتجارب العالمية تمتد في جميع أنحاء المملكة.">
+                        Entertainment seasons and world-stage experiences now extend across the Kingdom.
+                    </span>
+                </p>
+
+                <a href="{% url 'core:events' %}"
+                   class="future-card-btn translate-text"
+                   data-en="Explore"
+                   data-ar="استكشف">
+                    Explore
+                </a>
+            </div>
+
+            <div class="future-card reveal-up">
+                <div class="future-card-icon">
+                    <i class="fa-solid fa-microchip"></i>
+                </div>
+                <div class="future-card-glow"></div><h3 class="translate-text" data-en="Technology" data-ar="التقنية">Technology</h3>
+
+                <p>
+                    <span class="translate-text"
+                          data-en="AI, automation, robotics, and advanced digital systems now shape everyday life."
+                          data-ar="أصبحت تقنيات الذكاء الاصطناعي والأتمتة والروبوتات والأنظمة الرقمية المتقدمة تشكل الحياة اليومية.">
+                        AI, automation, robotics, and advanced digital systems now shape everyday life.
+                    </span>
+                    <span class="translate-text"
+                          data-en="They influence work, movement, services, and national-scale operations."
+                          data-ar="فهي تؤثر على العمل والتنقل والخدمات والعمليات على مستوى المملكة.">
+                        They influence work, movement, services, and national-scale operations.
+                    </span>
+                </p>
+
+                <a href="{% url 'core:technology' %}"
+                   class="future-card-btn translate-text"
+                   data-en="Explore"
+                   data-ar="استكشف">
+                    Explore
+                </a>
+            </div>
+
+            <div class="future-card reveal-up">
+                <div class="future-card-icon">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+                <div class="future-card-glow"></div>
+
+                <h3 class="translate-text" data-en="AI Assistant" data-ar="المساعد الذكي">AI Assistant</h3>
+
+                <p>
+                    <span class="translate-text"
+                          data-en="Intelligent digital assistants now help residents and visitors instantly."
+                          data-ar="تساعد المساعدات الرقمية الذكية السكان والزوار بشكل فوري.">
+                        Intelligent digital assistants now help residents and visitors instantly.
+                    </span>
+                    <span class="translate-text"
+                          data-en="They organize routes, destinations, events, and experiences in a seamless way."
+                          data-ar="وتنظم المسارات والوجهات والفعاليات والتجارب بطريقة سلسة.">
+                        They organize routes, destinations, events, and experiences in a seamless way.
+                    </span>
+                </p>
+
+                <a href="{% url 'core:ai_assistant' %}"
+                   class="future-card-btn translate-text"
+                   data-en="Explore"
+                   data-ar="استكشف">
+                    Explore
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="featured-future-section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="section-label green-label translate-text"
+                  data-en="FEATURED 2034 EXPERIENCES"
+                  data-ar="تجارب 2034 البارزة">
+                FEATURED 2034 EXPERIENCES
+            </span>
+
+            <h2 class="section-title-main translate-text"
+                data-en="What 2034 Looks Like"
+                data-ar="كيف تبدو السعودية في 2034">
+                What 2034 Looks Like
+            </h2>
+
+            <p class="section-desc">
+                <span class="translate-text"
+                      data-en="These destinations reflect the most visible outcomes of the transformation."
+                      data-ar="تعكس هذه الوجهات أبرز النتائج الواضحة لهذا التحول.">
+                    These destinations reflect the most visible outcomes of the transformation.
+                </span>
+                <span class="translate-text"
+                      data-en="They represent ambitious scale, global relevance, and a future built into everyday reality."
+                      data-ar="فهي تمثل طموحًا واسع النطاق، وحضورًا عالميًا، ومستقبلًا أصبح جزءًا من الواقع اليومي.">
+                    They represent ambitious scale, global relevance, and a future built into everyday reality.
+                </span>
+            </p>
+        </div>
+
+        <div class="featured-grid">
+            <div class="featured-card large-card reveal-left">
+                <img src="{% static 'images/neom.png' %}" alt="NEOM">
+                <div class="featured-overlay"></div>
+                <div class="featured-content">
+                    <span class="featured-badge translate-text"
+                          data-en="Smart Destination"
+                          data-ar="وجهة ذكية">
+                        Smart Destination
+                    </span>
+
+                    <h3 class="translate-text" data-en="NEOM" data-ar="نيوم">NEOM</h3>
+
+                    <p>
+                        <span class="translate-text"
+                              data-en="NEOM now stands as one of the clearest symbols of Saudi Arabia’s future."
+                              data-ar="تمثل نيوم اليوم أحد أوضح رموز مستقبل المملكة العربية السعودية.">
+                            NEOM now stands as one of the clearest symbols of Saudi Arabia’s future.
+                        </span>
+                        <span class="translate-text"
+                              data-en="It reflects intelligent infrastructure, sustainable planning, and globally relevant innovation."
+                              data-ar="فهي تعكس بنية تحتية ذكية وتخطيطًا مستدامًا وابتكارًا ذا تأثير عالمي.">
+                            It reflects intelligent infrastructure, sustainable planning, and globally relevant innovation.
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="featured-card reveal-up">
+                <img src="{% static 'images/qiddiya.png' %}" alt="Qiddiya">
+                <div class="featured-overlay"></div>
+                <div class="featured-content">
+                    <span class="featured-badge green-badge translate-text"
+                          data-en="Entertainment"
+                          data-ar="الترفيه">
+                        Entertainment
+                    </span>
+
+                    <h3 class="translate-text" data-en="Qiddiya" data-ar="القدية">Qiddiya</h3>
+
+                    <p>
+                        <span class="translate-text"
+                              data-en="Qiddiya has matured into a major hub for entertainment and culture."
+                              data-ar="أصبحت القدية مركزًا رئيسيًا للترفيه والثقافة.">
+                            Qiddiya has matured into a major hub for entertainment and culture.
+                        </span>
+                        <span class="translate-text"
+                              data-en="It also leads in sports experiences and destination-based lifestyle living."
+                              data-ar="كما أصبحت رائدة في التجارب الرياضية وأنماط الحياة المرتبطة بالوجهات.">
+                            It also leads in sports experiences and destination-based lifestyle living.
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="featured-card reveal-right">
+                <img src="{% static 'images/riyadh_future.png' %}" alt="Riyadh 2034">
+                <div class="featured-overlay"></div>
+                <div class="featured-content">
+                    <span class="featured-badge translate-text"
+                          data-en="Smart Capital"
+                          data-ar="العاصمة الذكية">
+                        Smart Capital
+                    </span>
+
+                    <h3 class="translate-text" data-en="Riyadh" data-ar="الرياض">Riyadh</h3>
+
+                    <p>
+                        <span class="translate-text"
+                              data-en="Riyadh now represents the operational heart of the Kingdom’s transformation."
+                              data-ar="تمثل الرياض اليوم القلب التشغيلي لتحول المملكة.">
+                            Riyadh now represents the operational heart of the Kingdom’s transformation.
+                        </span>
+                        <span class="translate-text"data-en="It combines smart mobility, advanced services, major events, and economic momentum."
+                              data-ar="فهي تجمع بين التنقل الذكي والخدمات المتقدمة والفعاليات الكبرى والزخم الاقتصادي.">
+                            It combines smart mobility, advanced services, major events, and economic momentum.
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="impact-stats-section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="section-label translate-text"
+                  data-en="VISION IMPACT BY 2034"
+                  data-ar="أثر الرؤية بحلول 2034">
+                VISION IMPACT BY 2034
+            </span>
+
+            <h2 class="section-title-main translate-text"
+                data-en="How Life Has Changed"
+                data-ar="كيف تغيّرت الحياة">
+                How Life Has Changed
+            </h2>
+        </div>
+
+        <div class="impact-stats-grid">
+
+            <div class="impact-stat-card reveal-up">
+                <div class="impact-stat-icon">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <div class="impact-stat-value">
+                    <span class="impact-number" data-target="92">0</span><span class="impact-symbol">%</span>
+                </div>
+                <h3 class="translate-text" data-en="Digital Services" data-ar="الخدمات الرقمية">Digital Services</h3>
+            </div>
+
+            <div class="impact-stat-card reveal-up">
+                <div class="impact-stat-icon">
+                    <i class="fa-solid fa-train"></i>
+                </div>
+                <div class="impact-stat-value">
+                    <span class="impact-number" data-target="78">0</span><span class="impact-symbol">%</span>
+                </div>
+                <h3 class="translate-text" data-en="Mobility Efficiency" data-ar="كفاءة التنقل">Mobility Efficiency</h3>
+            </div>
+
+            <div class="impact-stat-card reveal-up">
+                <div class="impact-stat-icon">
+                    <i class="fa-solid fa-plane-departure"></i>
+                </div>
+                <div class="impact-stat-value">
+                    <span class="impact-number" data-target="85">0</span><span class="impact-symbol">%</span>
+                </div>
+                <h3 class="translate-text" data-en="Tourism Growth" data-ar="نمو السياحة">Tourism Growth</h3>
+            </div>
+
+            <div class="impact-stat-card reveal-up">
+                <div class="impact-stat-icon">
+                    <i class="fa-solid fa-face-smile"></i>
+                </div>
+                <div class="impact-stat-value">
+                    <span class="impact-number" data-target="74">0</span><span class="impact-symbol">%</span>
+                </div>
+                <h3 class="translate-text" data-en="Quality of Life" data-ar="جودة الحياة">Quality of Life</h3>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="timeline-section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="section-label translate-text"
+                data-en="THE JOURNEY TO 2034"
+                data-ar="الرحلة إلى 2034">
+                THE JOURNEY TO 2034
+            </span>
+
+            <h2 class="section-title-main translate-text"
+                data-en="Milestones That Shaped the Future"
+                data-ar="محطات شكّلت المستقبل">
+                Milestones That Shaped the Future
+            </h2>
+
+            <p class="section-desc">
+                <span class="translate-text"
+                    data-en="From the launch of Vision 2030 to the maturity of its outcomes, the Kingdom’s path has been defined by acceleration and execution."
+                    data-ar="منذ إطلاق رؤية 2030 وحتى نضوج نتائجها، اتسم مسار المملكة بالتسارع والتنفيذ.">
+                    From the launch of Vision 2030 to the maturity of its outcomes, the Kingdom’s path has been defined by acceleration and execution.
+                </span>
+                <span class="translate-text"
+                    data-en="It is a journey marked by visible transformation across every major sector."
+                    data-ar="وهي رحلة تميزت بتحول واضح في جميع القطاعات الرئيسية.">
+                    It is a journey marked by visible transformation across every major sector.
+                </span>
+            </p>
+        </div>
+
+        <div class="timeline-wrapper">
+
+            <div class="timeline-item reveal-up">
+                <div class="timeline-dot"></div>
+                <div class="timeline-year">2016</div>
+                <div class="timeline-card">
+                    <h3 class="translate-text" data-en="Vision 2030 Launch" data-ar="انطلاق رؤية 2030">Vision 2030 Launch</h3>
+                    <p>
+                        <span class="translate-text"
+                            data-en="Saudi Arabia introduced a long-term national vision focused on diversification and quality of life."
+                            data-ar="قدمت المملكة العربية السعودية رؤية وطنية طويلة المدى تركز على التنوع وجودة الحياة.">
+                            Saudi Arabia introduced a long-term national vision focused on diversification and quality of life.
+                        </span>
+                        <span class="translate-text"
+                            data-en="It also aimed to strengthen institutions and create a more ambitious future for every sector."
+                            data-ar="كما هدفت إلى تعزيز المؤسسات وصناعة مستقبل أكثر طموحًا لكل قطاع.">
+                            It also aimed to strengthen institutions and create a more ambitious future for every sector.
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item reveal-up">
+                <div class="timeline-dot"></div>
+                <div class="timeline-year">2020</div>
+                <div class="timeline-card">
+                    <h3 class="translate-text"
+                        data-en="Structural Transformation Begins to Scale"
+                        data-ar="بدء التوسع في التحول الهيكلي">
+                        Structural Transformation Begins to Scale
+                    </h3>
+                    <p>
+                        <span class="translate-text"
+                            data-en="New digital systems, infrastructure programs, and tourism initiatives began to scale rapidly."
+                            data-ar="بدأت الأنظمة الرقمية الجديدة وبرامج البنية التحتية والمبادرات السياحية بالتوسع بسرعة.">
+                            New digital systems, infrastructure programs, and tourism initiatives began to scale rapidly.
+                        </span>
+                        <span class="translate-text"
+                            data-en="Major development projects started reshaping cities, services, and opportunities."
+                            data-ar="وبدأت المشاريع التنموية الكبرى بإعادة تشكيل المدن والخدمات والفرص.">
+                            Major development projects started reshaping cities, services, and opportunities.
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item reveal-up">
+                <div class="timeline-dot"></div>
+                <div class="timeline-year">2030</div>
+                <div class="timeline-card">
+                    <h3 class="translate-text"
+                        data-en="Vision Targets Reach National Maturity"
+                        data-ar="نضج مستهدفات الرؤية على المستوى الوطني">
+                        Vision Targets Reach National Maturity
+                    </h3>
+                    <p>
+                        <span class="translate-text"
+                            data-en="By 2030, the vision had moved from aspiration into measurable reality."
+                            data-ar="بحلول عام 2030 انتقلت الرؤية من الطموح إلى واقع ملموس وقابل للقياس.">
+                            By 2030, the vision had moved from aspiration into measurable reality.
+                        </span>
+                        <span class="translate-text"
+                            data-en="Mobility, experiences, investment appeal, and quality of life had all risen clearly."
+                            data-ar="وارتفعت بشكل واضح مستويات التنقل والتجارب والجاذبية الاستثمارية وجودة الحياة.">
+                            Mobility, experiences, investment appeal, and quality of life had all risen clearly.
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item reveal-up">
+                <div class="timeline-dot"></div>
+                <div class="timeline-year">2034</div>
+                <div class="timeline-card">
+                    <h3 class="translate-text"
+                        data-en="The Kingdom Presents Its New Era"
+                        data-ar="المملكة تقدم عصرها الجديد">
+                        The Kingdom Presents Its New Era
+                    </h3>
+                    <p>
+                        <span class="translate-text"
+                            data-en="Saudi Arabia now stands in 2034 as a destination shaped by execution and confidence."
+                            data-ar="تقف المملكة العربية السعودية اليوم في عام 2034 كوجهة تشكلت بالتنفيذ والثقة.">
+                            Saudi Arabia now stands in 2034 as a destination shaped by execution and confidence.
+                        </span>
+                        <span class="translate-text"
+                            data-en="It is globally relevant, digitally advanced, and ready to welcome the world at scale."
+                            data-ar="فهي ذات حضور عالمي، ومتقدمة رقميًا، ومستعدة لاستقبال العالم على نطاق واسع.">
+                            It is globally relevant, digitally advanced, and ready to welcome the world at scale.
+                        </span>
+                    </p>
+                </div>
+            </div>
+    </div>
+</section>
+
+<section class="map-preview-section" id="future-map">
+    <div class="container">
+        <div class="map-preview-wrapper reveal-up">
+
+            <div class="map-preview-content">
+                <span class="section-label green-label translate-text"
+                    data-en="INTERACTIVE FUTURE MAP"
+                    data-ar="الخريطة المستقبلية التفاعلية">
+                    INTERACTIVE FUTURE MAP
+                </span>
+
+                <h2 class="map-preview-title">
+                    <span class="translate-text"
+                        data-en="Explore Saudi Arabia Through"
+                        data-ar="استكشف السعودية من خلال">
+                        Explore Saudi Arabia Through
+                    </span>
+                    <span class="translate-text"
+                        data-en="Its Future Projects"
+                        data-ar="مشاريعها المستقبلية">
+                        Its Future Projects
+                    </span>
+                </h2>
+
+                <p class="map-preview-text">
+                    <span class="translate-text"
+                        data-en="Discover smart cities, tourism destinations, event districts, and technology hubs."
+                        data-ar="اكتشف المدن الذكية والوجهات السياحية ومناطق الفعاليات ومراكز التقنية.">
+                        Discover smart cities, tourism destinations, event districts, and technology hubs.
+                    </span>
+                    <span class="translate-text"
+                        data-en="Explore transport networks through an interactive 2034 map of the Kingdom."
+                        data-ar="استكشف شبكات النقل من خلال خريطة تفاعلية للمملكة في عام 2034.">
+                        Explore transport networks through an interactive 2034 map of the Kingdom.
+                    </span>
+                </p>
+                <div class="map-preview-tags">
+                    <span class="tag smart translate-text" data-en="Smart Cities" data-ar="المدن الذكية">Smart Cities</span>
+                    <span class="tag tourism translate-text" data-en="Tourism" data-ar="السياحة">Tourism</span>
+                    <span class="tag events translate-text" data-en="Events" data-ar="الفعاليات">Events</span>
+                    <span class="tag culture translate-text" data-en="AI & Tech" data-ar="الذكاء الاصطناعي والتقنية">AI & Tech</span>
+                    <span class="tag transport translate-text" data-en="Transport" data-ar="النقل">Transport</span>
+                </div>
+
+                <a href="{% url 'core:transport' %}"
+                   class="primary-btn map-preview-btn translate-text"
+                   data-en="Open the Interactive Map"
+                   data-ar="افتح الخريطة التفاعلية">
+                    Open the Interactive Map
+                </a>
+            </div>
+
+            <div class="map-preview-visual">
+                <div class="map-card">
+                    <img src="{% static 'images/map_2.png' %}" alt="Saudi Future Map">
+
+                    <div class="map-point point-1"></div>
+                    <div class="map-point point-2 tourism-point"></div>
+                    <div class="map-point point-3 events-point"></div>
+                    <div class="map-point point-4 culture-point"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/home.js' %}"></script>
+{% endblock %}

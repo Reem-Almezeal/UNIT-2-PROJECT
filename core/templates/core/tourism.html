@@ -1,0 +1,391 @@
+<!--
+Tourism page template for KsaFuture.
+
+This template presents Saudi Arabia's tourism transformation in 2034
+through premium destinations, future travel experiences, immersive media,
+and key tourism indicators. The page supports both English and Arabic
+through dynamic translation attributes.
+
+Features:
+    - Hero section with bilingual content
+    - Animated tourism categories strip
+    - Featured destinations slider
+    - Immersive tourism experience section
+    - Tourism impact statistics
+
+Author:
+    Reem Almezeal
+
+File:
+    tourism.html
+-->
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Tourism | KsaFuture{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/tourism.css' %}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+{% endblock %}
+
+{% block content %}
+
+<!-- Tourism Hero -->
+<section class="tourism-hero tourism-page-hero">
+    <div class="container">
+        <div class="tourism-hero-content reveal-up">
+
+            <span class="page-label translate-text"
+                  data-en="TOURISM IN SAUDI ARABIA"
+                  data-ar="السياحة في المملكة العربية السعودية">
+                TOURISM IN SAUDI ARABIA
+            </span>
+
+            <h1 class="tourism-hero-title">
+                <span class="translate-text"
+                      data-en="Saudi Arabia Now Welcomes"
+                      data-ar="السعودية اليوم ترحب بـ">
+                    Saudi Arabia Now Welcomes
+                </span>
+
+                <span class="translate-text"
+                      data-en="the World"
+                      data-ar="العالم">
+                    the World
+                </span>
+            </h1>
+
+            <p class="tourism-hero-text">
+                <span class="translate-text"
+                      data-en="From luxury islands and heritage landmarks to mountain escapes and world-class resorts, Saudi Arabia in 2034 has become one of the world's most remarkable tourism destinations."
+                      data-ar="من الجزر الفاخرة والمعالم التاريخية إلى الوجهات الجبلية والمنتجعات العالمية، أصبحت المملكة العربية السعودية في عام 2034 واحدة من أبرز الوجهات السياحية في العالم.">
+                    From luxury islands and heritage landmarks to mountain escapes and world-class resorts, Saudi Arabia in 2034 has become one of the world's most remarkable tourism destinations.
+                </span>
+            </p>
+
+            <div class="tourism-hero-buttons">
+                <a href="#tourism-slider"
+                   class="primary-btn translate-text"
+                   data-en="Explore Destinations"
+                   data-ar="استكشف الوجهات">
+                    Explore Destinations
+                </a>
+
+                <a href="#tourism-experiences"
+                   class="secondary-btn translate-text"
+                   data-en="Travel Experiences"
+                   data-ar="تجارب السفر">
+                    Travel Experiences
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Moving Tourism Strip -->
+<section class="cities-strip-section tourism-page-strip">
+    <div class="cities-strip">
+        <div class="cities-strip-track">
+
+            <span class="translate-text" data-en="LUXURY ESCAPES" data-ar="وجهات فاخرة">LUXURY ESCAPES</span>
+            <span class="translate-text" data-en="RED SEA RESORTS" data-ar="منتجعات البحر الأحمر">RED SEA RESORTS</span>
+            <span class="translate-text" data-en="CULTURAL WONDERS" data-ar="روائع ثقافية">CULTURAL WONDERS</span>
+            <span class="translate-text" data-en="MOUNTAIN RETREATS" data-ar="وجهات جبلية">MOUNTAIN RETREATS</span>
+            <span class="translate-text" data-en="HERITAGE DESTINATIONS" data-ar="وجهات تراثية">HERITAGE DESTINATIONS</span>
+            <span class="translate-text" data-en="WELLNESS TOURISM" data-ar="سياحة الاستجمام">WELLNESS TOURISM</span>
+            <span class="translate-text" data-en="GLOBAL HOSPITALITY" data-ar="ضيافة عالمية">GLOBAL HOSPITALITY</span>
+            <span class="translate-text" data-en="COASTAL EXPERIENCES" data-ar="تجارب ساحلية">COASTAL EXPERIENCES</span>
+
+            <span class="translate-text" data-en="LUXURY ESCAPES" data-ar="وجهات فاخرة">LUXURY ESCAPES</span>
+            <span class="translate-text" data-en="RED SEA RESORTS" data-ar="منتجعات البحر الأحمر">RED SEA RESORTS</span>
+            <span class="translate-text" data-en="CULTURAL WONDERS" data-ar="روائع ثقافية">CULTURAL WONDERS</span>
+            <span class="translate-text" data-en="MOUNTAIN RETREATS" data-ar="وجهات جبلية">MOUNTAIN RETREATS</span>
+            </div>
+    </div>
+</section>
+
+<!-- Featured Destinations -->
+<section class="tourism-slider-section" id="tourism-slider">
+    <div class="container">
+
+        <div class="section-heading reveal-up">
+            <span class="section-label green-label translate-text"
+                  data-en="FEATURED DESTINATIONS"
+                  data-ar="أبرز الوجهات">
+                FEATURED DESTINATIONS
+            </span>
+
+            <h2 class="section-title-main">
+                <span class="translate-text"
+                      data-en="The Destinations Defining Tourism in 2034"
+                      data-ar="الوجهات التي صنعت مستقبل السياحة في 2034">
+                    The Destinations Defining Tourism in 2034
+                </span>
+            </h2>
+
+            <p class="section-desc">
+                <span class="translate-text"
+                      data-en="Discover the most iconic places that now shape Saudi Arabia’s global tourism identity."
+                      data-ar="اكتشف أبرز الوجهات التي شكلت هوية السعودية السياحية عالميًا.">
+                    Discover the most iconic places that now shape Saudi Arabia’s global tourism identity.
+                </span>
+            </p>
+        </div>
+
+        <div class="swiper tourismSwiper reveal-up">
+            <div class="swiper-wrapper">
+
+                <!-- Red Sea -->
+                <div class="swiper-slide">
+                    <article class="destination-slide-card">
+                        <div class="destination-slide-media">
+                            <img src="{% static 'images/redsea.png' %}" alt="The Red Sea">
+                            <div class="destination-slide-overlay"></div>
+
+                            <span class="destination-slide-badge translate-text"
+                                  data-en="Luxury Coast"
+                                  data-ar="ساحل فاخر">
+                                Luxury Coast
+                            </span>
+                        </div>
+
+                        <div class="destination-slide-body">
+                            <h3 class="translate-text"
+                                data-en="The Red Sea"
+                                data-ar="البحر الأحمر">
+                                The Red Sea
+                            </h3>
+
+                            <p class="translate-text"
+                               data-en="A world-class destination of luxury resorts, turquoise islands, marine life, and exceptional hospitality."
+                               data-ar="وجهة عالمية تضم منتجعات فاخرة وجزرًا خلابة وحياة بحرية وضيافة استثنائية.">
+                                A world-class destination of luxury resorts, turquoise islands, marine life, and exceptional hospitality.
+                            </p>
+
+                            <div class="destination-slide-tags">
+                                <span class="translate-text" data-en="Resorts" data-ar="منتجعات">Resorts</span>
+                                <span class="translate-text" data-en="Marine Life" data-ar="حياة بحرية">Marine Life</span>
+                                <span class="translate-text" data-en="Luxury" data-ar="فخامة">Luxury</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- AMAALA -->
+                <div class="swiper-slide">
+                    <article class="destination-slide-card">
+                        <div class="destination-slide-media">
+                            <img src="{% static 'images/amaala.png' %}" alt="AMAALA">
+                            <div class="destination-slide-overlay"></div>
+
+                            <span class="destination-slide-badge translate-text"
+                                  data-en="Wellness"
+                                  data-ar="استجمام">
+                                Wellness
+                            </span>
+                        </div>
+
+                        <div class="destination-slide-body">
+                            <h3>AMAALA</h3>
+                            <p class="translate-text"
+                               data-en="A luxury destination dedicated to wellness, elite resorts, relaxation, and refined coastal experiences."
+                               data-ar="وجهة فاخرة مخصصة للاستجمام والمنتجعات الراقية والتجارب الساحلية المميزة.">
+                                A luxury destination dedicated to wellness, elite resorts, relaxation, and refined coastal experiences.
+                            </p>
+
+                            <div class="destination-slide-tags">
+                                <span class="translate-text" data-en="Wellness" data-ar="استجمام">Wellness</span>
+                                <span class="translate-text" data-en="Retreats" data-ar="منتجعات">Retreats</span>
+                                <span class="translate-text" data-en="Luxury" data-ar="فخامة">Luxury</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- AlUla -->
+                <div class="swiper-slide">
+                    <article class="destination-slide-card">
+                        <div class="destination-slide-media">
+                            <img src="{% static 'images/alula.png' %}" alt="AlUla">
+                            <div class="destination-slide-overlay"></div>
+
+                            <span class="destination-slide-badge translate-text"
+                                  data-en="Heritage"
+                                  data-ar="تراث">
+                                Heritage
+                            </span>
+                        </div>
+
+                        <div class="destination-slide-body">
+                            <h3>AlUla</h3>
+
+                            <p class="translate-text"
+                               data-en="A unique destination where heritage, history, nature, and art meet in an unforgettable experience."
+                               data-ar="وجهة استثنائية يلتقي فيها التراث والتاريخ والطبيعة والفن في تجربة لا تُنسى.">
+                                A unique destination where heritage, history, nature, and art meet in an unforgettable experience.
+                            </p>
+
+                            <div class="destination-slide-tags">
+                                <span class="translate-text" data-en="Culture" data-ar="ثقافة">Culture</span>
+                                <span class="translate-text" data-en="Heritage" data-ar="تراث">Heritage</span>
+                                <span class="translate-text" data-en="Nature" data-ar="طبيعة">Nature</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Sindalah -->
+                <div class="swiper-slide">
+                    <article class="destination-slide-card">
+                        <div class="destination-slide-media">
+                            <img src="{% static 'images/sindalah.png' %}" alt="Sindalah">
+                            <div class="destination-slide-overlay"></div>
+
+                            <span class="destination-slide-badge translate-text"
+                                  data-en="Island Escape"
+                                  data-ar="جزيرة فاخرة">
+                                Island Escape
+                            </span>
+                        </div>
+
+                        <div class="destination-slide-body">
+                            <h3>Sindalah</h3>
+
+                            <p class="translate-text"
+                               data-en="An exclusive island destination for yachts, luxury resorts, fine dining, and elite experiences."
+                               data-ar="جزيرة حصرية لليخوت والمنتجعات الفاخرة والمطاعم الراقية والتجارب المميزة.">
+                                An exclusive island destination for yachts, luxury resorts, fine dining, and elite experiences.
+                            </p>
+
+                            <div class="destination-slide-tags">
+                                <span class="translate-text" data-en="Yachts" data-ar="يخوت">Yachts</span>
+                                <span class="translate-text" data-en="Island" data-ar="جزيرة">Island</span>
+                                <span class="translate-text" data-en="Premium" data-ar="فاخرة">Premium</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+
+            <div class="tourism-swiper-controls">
+                <div class="swiper-pagination tourism-pagination"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Travel Experience -->
+<section class="tourism-immersive-section" id="tourism-experiences">
+    <div class="container">
+        <div class="tourism-immersive-wrap reveal-up">
+
+            <div class="tourism-immersive-media">
+                <video autoplay muted loop playsinline>
+                    <source src="{% static 'videos/future_ksa.mp4' %}" type="video/mp4">
+                </video>
+                <div class="tourism-immersive-overlay"></div>
+            </div>
+
+            <div class="tourism-immersive-content">
+
+                <span class="section-label translate-text"
+                      data-en="FROM HERITAGE TO LUXURY"
+                      data-ar="من التراث إلى الفخامة">
+                    FROM HERITAGE TO LUXURY
+                </span>
+
+                <h2 class="translate-text"
+                    data-en="Saudi Arabia Now Offers a Complete Tourism Experience"
+                    data-ar="السعودية اليوم تقدم تجربة سياحية متكاملة">
+                    Saudi Arabia Now Offers a Complete Tourism Experience
+                </h2>
+
+                <p class="translate-text"
+                   data-en="From ancient history and cultural landmarks to elite resorts, mountain adventures, and coastal escapes, the Kingdom now delivers one of the most diverse tourism journeys in the world."
+                   data-ar="من التاريخ العريق والمعالم الثقافية إلى المنتجعات الفاخرة والمغامرات الجبلية والوجهات الساحلية، تقدم المملكة اليوم واحدة من أكثر التجارب السياحية تنوعًا في العالم.">
+                    From ancient history and cultural landmarks to elite resorts, mountain adventures, and coastal escapes, the Kingdom now delivers one of the most diverse tourism journeys in the world.
+                </p>
+
+                <div class="tourism-immersive-points">
+                    <div class="translate-text" data-en="Luxury Hospitality" data-ar="ضيافة فاخرة">Luxury Hospitality</div>
+                    <div class="translate-text" data-en="Nature & Adventure" data-ar="طبيعة ومغامرات">Nature & Adventure</div>
+                    <div class="translate-text" data-en="Culture & Heritage" data-ar="ثقافة وتراث">Culture & Heritage</div>
+                    <div class="translate-text" data-en="Future Experiences" data-ar="تجارب مستقبلية">Future Experiences</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tourism Stats -->
+<section class="tourism-stats-section">
+    <div class="container">
+
+        <div class="section-heading reveal-up">
+            <span class="section-label section-label-green translate-text"
+                  data-en="TOURISM IMPACT"
+                  data-ar="أثر السياحة">
+                TOURISM IMPACT
+            </span>
+
+            <h2 class="section-title-main">
+                <span class="translate-text"
+                      data-en="Saudi Arabia Has Become a Global Destination in 2034"
+                      data-ar="أصبحت السعودية وجهة عالمية في 2034">
+                    Saudi Arabia Has Become a Global Destination in 2034
+                </span>
+            </h2>
+        </div>
+
+        <div class="tourism-stats-grid">
+
+            <div class="tourism-stat-card reveal-up">
+                <h3>10+</h3>
+                <p class="translate-text"
+                   data-en="Major Tourism Destinations"
+                   data-ar="وجهات سياحية كبرى">
+                    Major Tourism Destinations
+                </p>
+                </div>
+
+            <div class="tourism-stat-card reveal-up">
+                <h3>Luxury</h3>
+                <p class="translate-text"
+                   data-en="Resorts, Islands, and Retreats"
+                   data-ar="منتجعات وجزر ووجهات فاخرة">
+                    Resorts, Islands, and Retreats
+                </p>
+            </div>
+
+            <div class="tourism-stat-card reveal-up">
+                <h3>Culture</h3>
+                <p class="translate-text"
+                   data-en="Rich Heritage and History"
+                   data-ar="تراث وتاريخ غني">
+                    Rich Heritage and History
+                </p>
+            </div>
+
+            <div class="tourism-stat-card reveal-up">
+                <h3>All Year</h3>
+                <p class="translate-text"
+                   data-en="Mountains, Coasts, Events, and Nature"
+                   data-ar="جبال وسواحل وفعاليات وطبيعة">
+                    Mountains, Coasts, Events, and Nature
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="{% static 'js/tourism.js' %}"></script>
+{% endblock %}

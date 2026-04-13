@@ -1,76 +1,35 @@
-# UNIT-2-PROJECT
+# KsaFuture
 
-## Using Django create a project about our beloved kingdom of your choosing. Examples :
-- Tourism in Saudi Arabia.
-- Culture & Heritage in Saudi Arabia.
-- Manufacturing & Industries in Saudi Arabia.
-- Agriculture in Saudi Arabia.
-- Science in Saudi Arabia.
-- History of Saudi Arabia.
-- etc.....
+KsaFuture is an interactive website that takes users into Saudi Arabia in the year 2034. The platform allows users to explore what Saudi Arabia could look like in the future by showcasing the achievements, mega projects, smart cities, transportation systems, tourism destinations, technologies, and global events that have been achieved through Vision 2030.
 
+The website creates an immersive experience where users can imagine themselves living or visiting Saudi Arabia in 2034, while discovering how the country has transformed.
 
-# Minumum Requirements
-- Use Django.
-- Use templates & templates inheritance.
-- Use dynamic urls where applicable.
-- Use static files where applicable.
-- homepage + at least 6 pages.
-- Coherent, uniform design .
-- Implement dark and light mode.
-- Must be Responsive. 
-- You can use a CSS library to style your website (such as Bootstrap or equivalent)
-- You can use a cdn or a cloud storage to host large files such as large videos (example: Goolge Firebase Cloud Storage: https://firebase.google.com/docs/storage)
+## Main Features
+- AI Chat Assistant for travel plans, recommendations, and questions
+- Arabic and English translation
+- Light and Dark theme switching
+- Responsive design for all devices
+- Interactive pages about Saudi Arabia’s future
 
+## Pages
 
+- Home Page (`/`)  
+  Introduces Saudi Arabia in 2034 and gives an overview of the future vision.
 
-# Example : TOURISM-PROJECT
+- Cities Page (`/cities/`)  
+  Displays future cities and projects such as NEOM, Qiddiya, and The Line.
 
-## Using Django create a website for Tourism in Saudi Arabia . The project name is : Tourister
+- Tourism Page (`/tourism/`)  
+  Shows future tourism destinations and experiences across Saudi Arabia.
 
-### Your website has the following pages :
+- Transportation Page (`/transport/`)  
+  Explains how transportation has evolved in 2034 through smart mobility and advanced systems.
 
-#### "" : home page , with the following content:
-- Title of the page , with a catchy phrase about tourism in Saudi Arabia
-- A single wide image covering the page.
-- A paragraph about the tourism in Saudi Arabia in General.
-- A list of cities pages with links to them (the pages are listed down below).
+- Events Page (`/events/`)  
+  Presents future global events hosted in Saudi Arabia such as  World Cup 2034.
 
+- Technology Page (`/technology/`)  
+  Highlights the technologies that helped shape Saudi Arabia in 2034.
 
-#### "city/Riyadh/"
-- Title of city with a catchy phrase
-- A Gallery of images (you can use a Carousel) for the city.
-- A short video about the city . (you can embed a youtube video , or use a video hosted on your website)
-- Top Attraction of the city.
-- A briefe history / timeline of the city.
-- Major events in the city.
-
-#### "city/Abha/"
-- Title of city with a catchy phrase.
-- Top Attractions in the city.
-- A brief about the city.
-- A Gallery of images (you can use a Carousel) for the city.
-- A short video about the city . (you can embed a youtube video , or use a video hosted on your website)
-- Top Attraction of the city.
-- A briefe history / timeline of the city.
-- Major events in the city.
-
-#### "city/Mekkah/"
-- Title of city with a catchy phrase.
-- Top Attractions in the city.
-- A brief about the city.
-- A Gallery of images (you can use a Carousel) for the city.
-- A short video about the city . (you can embed a youtube video , or use a video hosted on your website)
-- Top Attraction of the city.
-- A briefe history / timeline of the city.
-- Major events in the city.
-
-#### "city/AlUla/"
-- Title of city with a catchy phrase.
-- Top Attractions in the city.
-- A brief about the city.
-- A Gallery of images (you can use a Carousel) for the city.
-- A short video about the city . (you can embed a youtube video , or use a video hosted on your website)
-- Top Attraction of the city.
-- A briefe history / timeline of the city.
-- Major events in the city.
+- AI Assistant Page (`/ai_assistant/`)  
+  Allows users to chat with an AI assistant to plan visits and discover Saudi Arabia in 2034.

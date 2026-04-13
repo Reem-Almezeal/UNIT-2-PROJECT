@@ -1,0 +1,479 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+
+<!--
+Events Page.
+
+Displays Saudi Arabia’s major global events and future-ready experiences
+through a modern interactive page focused on sports, entertainment,
+esports, festivals, and the road to 2034.
+
+Sections:
+    - Hero section
+    - Moving strip
+    - Featured events slider
+    - Event ecosystem
+    - Timeline section
+
+Features:
+    - Arabic and English support using translate-text
+    - Infinite moving events slider
+    - Responsive layout
+    - Scroll reveal animations
+-->
+
+{% block title %}Mega Events | KsaFuture{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/events.css' %}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+{% endblock %}
+
+{% block content %}
+
+<!-- Hero -->
+<div class="events-hero-content reveal-up">
+    <span class="page-label translate-text"
+          data-en="GLOBAL EVENTS & EXPERIENCES IN SAUDI ARABIA"
+          data-ar="الفعاليات والتجارب العالمية في المملكة العربية السعودية">
+        GLOBAL EVENTS & EXPERIENCES IN SAUDI ARABIA
+    </span>
+
+    <h1 class="events-hero-title">
+        <span class="translate-text"
+              data-en="Saudi Arabia"
+              data-ar="السعودية">
+            Saudi Arabia
+        </span>
+
+        <span class="translate-text"
+              data-en="Hosts the World’s"
+              data-ar="تستضيف">
+            Hosts the World’s
+        </span>
+
+        <span class="translate-text"
+              data-en="Biggest Moments"
+              data-ar="أكبر لحظات العالم">
+            Biggest Moments
+        </span>
+    </h1>
+
+    <p class="events-hero-text">
+        <span class="translate-text"
+              data-en="Discover the tournaments, entertainment seasons, concerts, esports events, and future experiences that are turning Saudi Arabia into a global stage."
+              data-ar="اكتشف البطولات والمواسم الترفيهية والحفلات والفعاليات الإلكترونية والتجارب المستقبلية التي تجعل السعودية اليوم منصة عالمية للأحداث الكبرى.">
+            Discover the tournaments, entertainment seasons, concerts, esports events, and future experiences that are turning Saudi Arabia into a global stage.
+        </span>
+    </p>
+
+    <div class="events-hero-buttons">
+        <a href="#event-highlights"
+           class="primary-btn translate-text"
+           data-en="Explore Events"
+           data-ar="استكشف الفعاليات">
+            Explore Events
+        </a>
+
+        <a href="#event-timeline"
+           class="secondary-btn translate-text"
+           data-en="See the Road to 2034"
+           data-ar="شاهد الطريق إلى 2034">
+            See the Road to 2034
+        </a>
+    </div>
+</div>
+
+<!-- Strip -->
+<section class="events-strip-section">
+    <div class="events-strip">
+        <div class="events-strip-track">
+            <span class="translate-text" data-en="FIFA WORLD CUP 2034" data-ar="كأس العالم 2034">FIFA WORLD CUP 2034</span>
+            <span class="translate-text" data-en="RIYADH SEASON" data-ar="موسم الرياض">RIYADH SEASON</span>
+            <span class="translate-text" data-en="JEDDAH SEASON" data-ar="موسم جدة">JEDDAH SEASON</span>
+            <span class="translate-text" data-en="FORMULA 1 SAUDI GP" data-ar="الفورمولا 1 السعودية">FORMULA 1 SAUDI GP</span>
+            <span class="translate-text" data-en="DIRIYAH E-PRIX" data-ar="درعية إي بري">DIRIYAH E-PRIX</span>
+            <span class="translate-text" data-en="ESPORTS WORLD CUP" data-ar="كأس العالم للرياضات الإلكترونية">ESPORTS WORLD CUP</span>
+            <span class="translate-text" data-en="ASIAN CUP" data-ar="كأس آسيا">ASIAN CUP</span>
+            <span class="translate-text" data-en="BOXING EVENTS" data-ar="فعاليات الملاكمة">BOXING EVENTS</span>
+            <span class="translate-text" data-en="LIVE CONCERTS" data-ar="حفلات مباشرة">LIVE CONCERTS</span>
+            <span class="translate-text" data-en="GLOBAL FESTIVALS" data-ar="مهرجانات عالمية">GLOBAL FESTIVALS</span>
+            <span class="translate-text" data-en="INTERNATIONAL SHOWS" data-ar="عروض دولية">INTERNATIONAL SHOWS</span>
+            <span class="translate-text" data-en="FAN ZONES" data-ar="مناطق المشجعين">FAN ZONES</span>
+            <span class="translate-text" data-en="STADIUM OPENINGS" data-ar="افتتاح الملاعب">STADIUM OPENINGS</span>
+            <span class="translate-text" data-en="ARENA EVENTS" data-ar="فعاليات الساحات">ARENA EVENTS</span>
+
+            <span class="translate-text" data-en="FIFA WORLD CUP 2034" data-ar="كأس العالم 2034">FIFA WORLD CUP 2034</span>
+            <span class="translate-text" data-en="RIYADH SEASON" data-ar="موسم الرياض">RIYADH SEASON</span>
+            <span class="translate-text" data-en="JEDDAH SEASON" data-ar="موسم جدة">JEDDAH SEASON</span>
+            <span class="translate-text" data-en="FORMULA 1 SAUDI GP" data-ar="الفورمولا 1 السعودية">FORMULA 1 SAUDI GP</span>
+            <span class="translate-text" data-en="DIRIYAH E-PRIX" data-ar="درعية إي بري">DIRIYAH E-PRIX</span>
+            <span class="translate-text" data-en="ESPORTS WORLD CUP" data-ar="كأس العالم للرياضات الإلكترونية">ESPORTS WORLD CUP</span>
+            <span class="translate-text" data-en="ASIAN CUP" data-ar="كأس آسيا">ASIAN CUP</span>
+            <span class="translate-text" data-en="BOXING EVENTS" data-ar="فعاليات الملاكمة">BOXING EVENTS</span>
+            <span class="translate-text" data-en="LIVE CONCERTS" data-ar="حفلات مباشرة">LIVE CONCERTS</span>
+            <span class="translate-text" data-en="GLOBAL FESTIVALS" data-ar="مهرجانات عالمية">GLOBAL FESTIVALS</span>
+            <span class="translate-text" data-en="INTERNATIONAL SHOWS" data-ar="عروض دولية">INTERNATIONAL SHOWS</span>
+            <span class="translate-text" data-en="FAN ZONES" data-ar="مناطق المشجعين">FAN ZONES</span>
+            <span class="translate-text" data-en="STADIUM OPENINGS" data-ar="افتتاح الملاعب">STADIUM OPENINGS</span>
+            <span class="translate-text" data-en="ARENA EVENTS" data-ar="فعاليات الساحات">ARENA EVENTS</span>
+        </div>
+    </div>
+</section>
+<!-- Highlights -->
+<section class="event-highlights-section" id="event-highlights">
+    <div class="container">
+        <div class="section-heading reveal-up">
+            <span class="section-label translate-text"
+                  data-en="SIGNATURE EXPERIENCES"
+                  data-ar="احداث بارزة">
+                SIGNATURE EXPERIENCES
+            </span>
+
+            <h2 class="section-title-main">
+                <span class="translate-text"
+                      data-en="Events That Define the New Era"
+                      data-ar="احداث صنعت الترفيه   ">
+                    Events That Define the New Era
+                </span>
+            </h2>
+
+            <p class="section-desc">
+                <span class="translate-text"
+                      data-en="Saudi Arabia is becoming a global destination for sports, culture, live entertainment, esports, and large-scale fan experiences."
+                      data-ar="تتحول السعودية إلى وجهة عالمية للرياضة والثقافة والترفيه الحي والرياضات الإلكترونية وتجارب الجماهير واسعة النطاق.">
+                    Saudi Arabia is becoming a global destination for sports, culture, live entertainment, esports, and large-scale fan experiences.
+                </span>
+            </p>
+        </div>
+
+        <div class="events-loop-wrap reveal-up">
+            <div class="events-loop-track">
+
+                <!-- المجموعة الأولى -->
+                <article class="event-tall-card">
+                    <img src="{% static 'images/jeddah_seasson.png' %}" alt="Global Concerts">
+                    <div class="event-card-overlay"></div>
+                    <div class="event-card-content">
+                        <h3 class="translate-text"
+                            data-en="Global Concerts"
+                            data-ar=" موسم جدة">
+                            Global Concerts
+                        </h3>
+                    </div>
+                </article>
+
+                <article class="event-tall-card" aria-hidden="true">
+                    <img src="{% static 'images/world_cup.png' %}" alt="FIFA World Cup 2034">
+                    <div class="event-card-overlay"></div>
+                    <div class="event-card-content">
+                        <h3 class="translate-text"
+                            data-en="FIFA World Cup 2034"
+                            data-ar="كأس العالم 2034">
+                            FIFA World Cup 2034
+                        </h3>
+                    </div>
+                </article>
+
+                <article class="event-tall-card">
+                    <img src="{% static 'images/riyadh_season.png' %}" alt="Riyadh Season">
+                    <div class="event-card-overlay"></div>
+                    <div class="event-card-content">
+                        <h3 class="translate-text"
+                            data-en="Riyadh Season"
+                            data-ar="موسم الرياض">
+                            Riyadh Season
+                        </h3>
+                    </div>
+                </article>
+
+                <article class="event-tall-card">
+                    <img src="{% static 'images/game.png' %}" alt="Esports World Cup">
+                    <div class="event-card-overlay"></div>
+                    <div class="event-card-content">
+                        <h3 class="translate-text"
+                            data-en="Esports World Cup"
+                            data-ar="  الرياضات الإلكترونية">
+                            Esports World Cup
+                        </h3>
+                    </div>
+                </article>
+
+                <article class="event-tall-card">
+                    <img src="{% static 'images/formula .png' %}" alt="Formula 1 Saudi GP">
+                    <div class="event-card-overlay"></div>
+                    <div class="event-card-content">
+                        <h3 class="translate-text"
+                            data-en="Formula 1 Saudi GP"
+                            data-ar="الفورمولا 1 السعودية">
+                            Formula 1 Saudi GP</h3>
+                    </div>
+                </article>
+
+                <article class="event-tall-card">
+                    <img src="{% static 'images/jeddah_seasson.png' %}" alt="Global Concerts">
+                    <div class="event-card-overlay"></div>
+                    <div class="event-card-content">
+                        <h3 class="translate-text"
+                            data-en="Global Concerts"
+                            data-ar=" موسم جدة">
+                            Global Concerts
+                        </h3>
+                    </div>
+                </article>
+
+                <article class="event-tall-card">
+                    <img src="{% static 'images/riyadh_season.png' %}" alt="Riyadh Season">
+                    <div class="event-card-overlay"></div>
+                    <div class="event-card-content">
+                        <h3 class="translate-text"
+                            data-en="Riyadh Season"
+                            data-ar="موسم الرياض">
+                            Riyadh Season
+                        </h3>
+                    </div>
+                </article>
+
+                <article class="event-tall-card" aria-hidden="true">
+                    <img src="{% static 'images/world_cup.png' %}" alt="FIFA World Cup 2034">
+                    <div class="event-card-overlay"></div>
+                    <div class="event-card-content">
+                        <h3 class="translate-text"
+                            data-en="FIFA World Cup 2034"
+                            data-ar="كأس العالم 2034">
+                            FIFA World Cup 2034
+                        </h3>
+                    </div>
+                </article>
+
+                <article class="event-tall-card" aria-hidden="true">
+                    <img src="{% static 'images/qiddiya.png' %}" alt="Riyadh Season">
+                    <div class="event-card-overlay"></div>
+                    <div class="event-card-content">
+                        <h3 class="translate-text"
+                            data-en="Riyadh Season"
+                            data-ar="موسم الرياض">
+                            Riyadh Season
+                        </h3>
+                    </div>
+                </article>
+
+                <article class="event-tall-card">
+                    <img src="{% static 'images/game.png' %}" alt="Esports World Cup">
+                    <div class="event-card-overlay"></div>
+                    <div class="event-card-content">
+                        <h3 class="translate-text"
+                            data-en="Esports World Cup"
+                            data-ar="  الرياضات الإلكترونية">
+                            Esports World Cup
+                        </h3>
+                    </div>
+                </article>
+
+                <article class="event-tall-card">
+                    <img src="{% static 'images/formula .png' %}" alt="Formula 1 Saudi GP">
+                    <div class="event-card-overlay"></div>
+                    <div class="event-card-content">
+                        <h3 class="translate-text"
+                            data-en="Formula 1 Saudi GP"
+                            data-ar="الفورمولا 1 السعودية">
+                            Formula 1 Saudi GP</h3>
+                    </div>
+                </article>
+
+                <article class="event-tall-card">
+                    <img src="{% static 'images/jeddah_seasson.png' %}" alt="Global Concerts">
+                    <div class="event-card-overlay"></div>
+                    <div class="event-card-content">
+                        <h3 class="translate-text"
+                            data-en="Global Concerts"
+                            data-ar=" موسم جدة">
+                            Global Concerts
+                        </h3>
+                    </div>
+                </article>
+
+            </div></div>
+    </div>
+</section>
+<!-- Modes -->
+<section class="event-modes-section">
+    <div class="container">
+        <div class="section-heading reveal-up">
+            <span class="section-label green-label translate-text"
+                  data-en="EVENT ECOSYSTEM"
+                  data-ar="منظومة الفعاليات">
+                EVENT ECOSYSTEM
+            </span>
+
+            <h2 class="section-title-main">
+                <span class="translate-text"
+                      data-en="More Than Just Venues"
+                      data-ar="الاحداث و الفعاليات ">
+                    More Than Just Venues
+                </span>
+            </h2>
+        </div>
+
+        <div class="event-modes-stack">
+
+            <article class="event-mode-panel reveal-left">
+                <div class="event-mode-icon"><i class="fa-solid fa-trophy"></i></div>
+                <div class="event-mode-text">
+                    <h3 class="translate-text"
+                        data-en="Global Sports Events"
+                        data-ar="فعاليات رياضية عالمية">
+                        Global Sports Events
+                    </h3>
+                    <p class="translate-text"
+                       data-en="International tournaments, championship venues, and smart stadium experiences built for global audiences."
+                       data-ar="بطولات دولية وملاعب حديثة وتجارب جماهيرية ذكية صممت لاستقبال العالم.">
+                        International tournaments, championship venues, and smart stadium experiences built for global audiences.
+                    </p>
+                </div>
+            </article>
+
+            <article class="event-mode-panel reveal-right">
+                <div class="event-mode-icon"><i class="fa-solid fa-music"></i></div>
+                <div class="event-mode-text">
+                    <h3 class="translate-text"
+                        data-en="Entertainment at Scale"
+                        data-ar="ترفيه على نطاق واسع">
+                        Entertainment at Scale
+                    </h3>
+                    <p class="translate-text"data-en="Concerts, festivals, city-wide activations, and immersive entertainment moments across the Kingdom."
+                       data-ar="حفلات ومهرجانات وتجارب ترفيهية غامرة وفعاليات تمتد عبر مدن المملكة.">
+                        Concerts, festivals, city-wide activations, and immersive entertainment moments across the Kingdom.
+                    </p>
+                </div>
+            </article>
+
+            <article class="event-mode-panel reveal-left">
+                <div class="event-mode-icon"><i class="fa-solid fa-gamepad"></i></div>
+                <div class="event-mode-text">
+                    <h3 class="translate-text"
+                        data-en="Esports & Digital Culture"
+                        data-ar="الرياضات الإلكترونية والثقافة الرقمية">
+                        Esports & Digital Culture
+                    </h3>
+                    <p class="translate-text"
+                       data-en="Gaming tournaments, connected audiences, and next-generation competitive entertainment experiences."
+                       data-ar="بطولات ألعاب إلكترونية وجماهير رقمية متصلة وتجارب تنافسية من الجيل القادم.">
+                        Gaming tournaments, connected audiences, and next-generation competitive entertainment experiences.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+<!-- Timeline -->
+<section class="event-timeline-section" id="event-timeline">
+    <div class="container">
+        <div class="section-heading reveal-up">
+            <span class="section-label translate-text"
+                  data-en="THE ROAD TO 2034"
+                  data-ar="الطريق إلى 2034">
+                THE ROAD TO 2034
+            </span>
+
+            <h2 class="section-title-main">
+                <span class="translate-text"
+                      data-en="The Build-Up to Global Impact"
+                      data-ar="مراحل التقدم والتطور">
+                    The Build-Up to Global Impact
+                </span>
+            </h2>
+
+            <p class="section-desc">
+                <span class="translate-text"
+                      data-en="Saudi Arabia’s event ecosystem is expanding year after year through bigger venues, stronger visibility, and world-scale hosting ambitions."
+                      data-ar="تتوسع منظومة الفعاليات في السعودية عامًا بعد عام عبر مواقع أكبر وحضور أقوى وطموحات استضافة على مستوى العالم.">
+                    Saudi Arabia’s event ecosystem is expanding year after year through bigger venues, stronger visibility, and world-scale hosting ambitions.
+                </span>
+            </p>
+        </div>
+
+        <div class="event-timeline-rail">
+
+            <div class="timeline-line"></div>
+
+            <article class="timeline-milestone reveal-up">
+                <div class="milestone-dot"></div>
+                <span class="milestone-year">2026</span>
+                <div class="milestone-card">
+                    <h3 class="translate-text"
+                        data-en="Expanded Event Calendar"
+                        data-ar="الانطلاقة">
+                        Expanded Event Calendar
+                    </h3>
+                    <p class="translate-text"
+                       data-en="Saudi Arabia continues to host larger cultural, sporting, and entertainment experiences across major cities."
+                       data-ar="تواصل السعودية استضافة فعاليات ثقافية ورياضية وترفيهية أكبر في المدن الرئيسية.">
+                        Saudi Arabia continues to host larger cultural, sporting, and entertainment experiences across major cities.
+                    </p>
+                </div>
+            </article>
+
+            <article class="timeline-milestone reveal-up">
+                <div class="milestone-dot"></div>
+                <span class="milestone-year">2028</span>
+                <div class="milestone-card">
+                    <h3 class="translate-text"
+                        data-en="Venue Growth"
+                        data-ar="التطور و التقدم">
+                        Venue Growth
+                    </h3>
+                    <p class="translate-text"
+                       data-en="New arenas, destination districts, and event-ready infrastructure strengthen the Kingdom’s live-event ecosystem."
+                       data-ar="تعزز الساحات الجديدة ومناطق الوجهات والبنية المجهزة للفعاليات منظومة الأحداث الحية في المملكة.">
+                        New arenas, destination districts, and event-ready infrastructure strengthen the Kingdom’s live-event ecosystem.
+                    </p>
+                </div>
+            </article>
+
+            <article class="timeline-milestone reveal-up">
+                <div class="milestone-dot"></div>
+                <span class="milestone-year">2030</span>
+                <div class="milestone-card">
+                    <h3 class="translate-text"
+                        data-en="Global Visibility"
+                        data-ar=" محط انظار العالم">
+                        Global Visibility
+                    </h3>
+                    <p class="translate-text"
+                       data-en="Saudi Arabia becomes a stronger international stage for visitors, audiences, brands, and major organizers."
+                       data-ar="تصبح السعودية منصة دولية أقوى للزوار والجماهير والعلامات العالمية وكبرى الجهات المنظمة.">
+                        Saudi Arabia becomes a stronger international stage for visitors, audiences, brands, and major organizers.
+                    </p>
+                </div>
+            </article>
+
+            <article class="timeline-milestone reveal-up">
+                <div class="milestone-dot"></div>
+                <span class="milestone-year">2034</span>
+                <div class="milestone-card">
+                    <h3 class="translate-text"
+                        data-en="Peak Global Spotlight"
+                        data-ar="ذروة  الاقتصاد">
+                        Peak Global Spotlight
+                    </h3>
+                    <p class="translate-text"
+                       data-en="The Kingdom enters a defining moment through world-scale hosting, connected experiences, and iconic destinations."
+                       data-ar="تدخل المملكة لحظة مفصلية عبر استضافات عالمية وتجارب مترابطة ووجهات أيقونية.">
+                        The Kingdom enters a defining moment through world-scale hosting, connected experiences, and iconic destinations.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="{% static 'js/events.js' %}"></script>
+{% endblock %}

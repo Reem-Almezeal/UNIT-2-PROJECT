@@ -1,0 +1,398 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}AI Travel Assistant | KsaFuture{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/ai_assistant.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- HERO -->
+<section class="ai-page-hero">
+    <div class="container">
+        <div class="ai-hero-shell reveal-up">
+
+            <div class="ai-hero-content ai-hero-full">
+                <span class="page-label translate-text"
+                      data-en="AI TRAVEL ASSISTANT • SAUDI ARABIA"
+                      data-ar="المساعد الذكي للسفر • المملكة العربية السعودية">
+                    AI TRAVEL ASSISTANT • SAUDI ARABIA
+                </span>
+
+                <h1 class="ai-hero-title">
+                    <span class="translate-text"
+                          data-en="Plan Every Visit"
+                          data-ar="خطط لكل زيارة">
+                        Plan Every Visit
+                    </span>
+
+                    <span class="translate-text"
+                          data-en="Smarter with AI"
+                          data-ar="بذكاء أكبر مع الذكاء الاصطناعي">
+                        Smarter with AI
+                    </span>
+                </h1>
+
+                <p class="ai-hero-text">
+                    <span class="translate-text"
+                          data-en="In 2034, intelligent assistants help visitors and residents organize routes, events, transport, dining, and cultural experiences across Saudi Arabia in seconds."
+                          data-ar="في 2034 يساعد المساعد الذكي الزوار والمقيمين على تنظيم المسارات والفعاليات والتنقل والمطاعم والتجارب الثقافية في أنحاء السعودية خلال ثوانٍ.">
+                        In 2034, intelligent assistants help visitors and residents organize routes, events, transport, dining, and cultural experiences across Saudi Arabia in seconds.
+                    </span>
+                </p>
+
+                <div class="ai-hero-actions">
+                    <a href="#assistant-chat"
+                       class="primary-btn translate-text"
+                       data-en="Start Planning"
+                       data-ar="ابدأ التخطيط">
+                        Start Planning
+                    </a>
+
+                    <a href="#demo-plans"
+                       class="secondary-btn translate-text"
+                       data-en="See Demo Plans"
+                       data-ar="شاهد الخطط التجريبية">
+                        See Demo Plans
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CHAT -->
+<section class="assistant-chat-section" id="assistant-chat">
+    <div class="container">
+        <div class="section-heading reveal-up">
+            <span class="section-label translate-text"
+                  data-en="LIVE PLANNING INTERFACE"
+                  data-ar="واجهة التخطيط المباشر">
+                LIVE PLANNING INTERFACE
+            </span>
+
+            <h2 class="section-title-main">
+                <span class="translate-text"data-en="Your AI Guide for Saudi Arabia"
+                      data-ar="دليلك الذكي في السعودية">
+                    Your AI Guide for Saudi Arabia
+                </span>
+            </h2>
+
+            <p class="section-desc">
+                <span class="translate-text"
+                      data-en="Ask the assistant about events, routes, transportation, entertainment, food, sports, culture, and one-day or multi-day visits."
+                      data-ar="اسأل المساعد عن الفعاليات والمسارات ووسائل النقل والترفيه والطعام والرياضة والثقافة وخطط الزيارة ليوم واحد أو عدة أيام.">
+                    Ask the assistant about events, routes, transportation, entertainment, food, sports, culture, and one-day or multi-day visits.
+                </span>
+            </p>
+        </div>
+
+        <div class="assistant-chat-shell reveal-up">
+            <div class="assistant-chat-panel">
+                <div class="chat-topbar">
+                    <div class="chat-status-wrap">
+                        <span class="chat-status-dot"></span>
+                        <span class="chat-status-text translate-text"
+                              data-en="Saudi AI Assistant • Live"
+                              data-ar="المساعد الذكي السعودي • مباشر">
+                            Saudi AI Assistant • Live
+                        </span>
+                    </div>
+
+                    <div class="chat-status-badge translate-text"
+                         data-en="Real-Time Planning"
+                         data-ar="تخطيط لحظي">
+                        Real-Time Planning
+                    </div>
+                </div>
+
+                <div class="chat-body" id="chatBody">
+                    <div class="chat-message user-msg">
+                        <span class="translate-text"
+                              data-en="Plan a one-day trip in Riyadh with sports, food, and entertainment."
+                              data-ar="خطط لي رحلة يوم واحد في الرياض تشمل الرياضة والطعام والترفيه.">
+                            Plan a one-day trip in Riyadh with sports, food, and entertainment.
+                        </span>
+                    </div>
+
+                    <div class="chat-message bot-msg">
+                        <span class="translate-text"
+                              data-en="Here is your optimized Riyadh plan:"
+                              data-ar="هذه خطتك المثالية في الرياض:">
+                            Here is your optimized Riyadh plan:
+                        </span>
+                        <ul>
+                            <li class="translate-text"
+                                data-en="Morning: Boulevard experience"
+                                data-ar="الصباح: تجربة في البوليفارد">
+                                Morning: Boulevard experience
+                            </li>
+                            <li class="translate-text"
+                                data-en="Afternoon: Local lunch and coffee stop"
+                                data-ar="الظهيرة: غداء محلي وتوقف للقهوة">
+                                Afternoon: Local lunch and coffee stop
+                            </li>
+                            <li class="translate-text"
+                                data-en="Evening: Sports or live entertainment event"
+                                data-ar="المساء: فعالية رياضية أو ترفيه مباشر">
+                                Evening: Sports or live entertainment event
+                            </li>
+                            <li class="translate-text"
+                                data-en="Night: Smart transport route back"
+                                data-ar="الليل: مسار عودة ذكي">
+                                Night: Smart transport route back
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="chat-message user-msg">
+                        <span class="translate-text"
+                              data-en="I want a quieter cultural visit instead."data-ar="أريد زيارة ثقافية أكثر هدوءًا بدلًا من ذلك.">
+                            I want a quieter cultural visit instead.
+                        </span>
+                    </div>
+
+                    <div class="chat-message bot-msg">
+                        <span class="translate-text"
+                              data-en="Updated plan:"
+                              data-ar="الخطة بعد التعديل:">
+                            Updated plan:
+                        </span>
+                        <ul>
+                            <li class="translate-text"
+                                data-en="Start with a heritage destination"
+                                data-ar="ابدأ بوجهة تراثية">
+                                Start with a heritage destination
+                            </li>
+                            <li class="translate-text"
+                                data-en="Visit a digital museum experience"
+                                data-ar="زر تجربة متحف رقمي">
+                                Visit a digital museum experience
+                            </li>
+                            <li class="translate-text"
+                                data-en="Enjoy a calm café stop"
+                                data-ar="استمتع بتوقف هادئ في مقهى">
+                                Enjoy a calm café stop
+                            </li>
+                            <li class="translate-text"
+                                data-en="End with a sunset cultural route"
+                                data-ar="اختم بمسار ثقافي وقت الغروب">
+                                End with a sunset cultural route
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="chat-suggestions">
+                    <button class="suggestion-chip translate-text"
+                            data-en="Family day in Riyadh"
+                            data-ar="يوم عائلي في الرياض">
+                        Family day in Riyadh
+                    </button>
+
+                    <button class="suggestion-chip translate-text"
+                            data-en="Sports weekend"
+                            data-ar="عطلة رياضية">
+                        Sports weekend
+                    </button>
+
+                    <button class="suggestion-chip translate-text"
+                            data-en="Cultural route"
+                            data-ar="مسار ثقافي">
+                        Cultural route
+                    </button>
+
+                    <button class="suggestion-chip translate-text"
+                            data-en="Luxury evening"
+                            data-ar="أمسية فاخرة">
+                        Luxury evening
+                    </button>
+
+                    <button class="suggestion-chip translate-text"
+                            data-en="World Cup matchday"
+                            data-ar="يوم مباراة في كأس العالم">
+                        World Cup matchday
+                    </button>
+                </div>
+
+                <form class="chat-inputbar" id="chatForm">
+                    <input
+                        type="text"
+                        id="chatInput"
+                        class="translate-input"
+                        data-en-placeholder="Ask the AI assistant about your visit..."
+                        data-ar-placeholder="اسأل المساعد الذكي عن زيارتك..."
+                        placeholder="Ask the AI assistant about your visit..."
+                        autocomplete="off"
+                    >
+                    <button type="submit" aria-label="Send">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- USE CASES -->
+<section class="assistant-usecases-section">
+    <div class="container">
+        <div class="section-heading reveal-up">
+            <span class="section-label green-label translate-text"data-en="POPULAR USE CASES"
+                  data-ar="حالات الاستخدام الشائعة">
+                POPULAR USE CASES
+            </span>
+
+            <h2 class="section-title-main">
+                <span class="translate-text"
+                      data-en="How People Use the Assistant"
+                      data-ar="كيف يستخدم الناس المساعد">
+                    How People Use the Assistant
+                </span>
+            </h2>
+        </div>
+
+        <div class="usecases-grid">
+            <article class="usecase-card reveal-up">
+                <div class="usecase-icon"><i class="fa-solid fa-people-group"></i></div>
+                <h3 class="translate-text" data-en="Family Planning" data-ar="التخطيط العائلي">
+                    Family Planning
+                </h3>
+                <p class="translate-text"
+                   data-en="Create easy day plans with family-friendly destinations, dining, and transport suggestions."
+                   data-ar="أنشئ خططًا يومية سهلة تشمل وجهات مناسبة للعائلة ومطاعم واقتراحات للتنقل.">
+                    Create easy day plans with family-friendly destinations, dining, and transport suggestions.
+                </p>
+            </article>
+
+            <article class="usecase-card reveal-up">
+                <div class="usecase-icon"><i class="fa-solid fa-trophy"></i></div>
+                <h3 class="translate-text" data-en="Sports Days" data-ar="الأيام الرياضية">
+                    Sports Days
+                </h3>
+                <p class="translate-text"
+                   data-en="Plan around stadium visits, match schedules, fan zones, and nearby entertainment options."
+                   data-ar="خطط حول زيارات الملاعب ومواعيد المباريات ومناطق المشجعين وخيارات الترفيه القريبة.">
+                    Plan around stadium visits, match schedules, fan zones, and nearby entertainment options.
+                </p>
+            </article>
+
+            <article class="usecase-card reveal-up">
+                <div class="usecase-icon"><i class="fa-solid fa-landmark"></i></div>
+                <h3 class="translate-text" data-en="Cultural Visits" data-ar="الزيارات الثقافية">
+                    Cultural Visits
+                </h3>
+                <p class="translate-text"
+                   data-en="Build calm, heritage-focused experiences with museums, historic districts, and smart routes."
+                   data-ar="أنشئ تجارب هادئة تركز على التراث تشمل المتاحف والأحياء التاريخية والمسارات الذكية.">
+                    Build calm, heritage-focused experiences with museums, historic districts, and smart routes.
+                </p>
+            </article>
+
+            <article class="usecase-card reveal-up">
+                <div class="usecase-icon"><i class="fa-solid fa-star"></i></div>
+                <h3 class="translate-text" data-en="Luxury Evenings" data-ar="الأمسيات الفاخرة">
+                    Luxury Evenings
+                </h3>
+                <p class="translate-text"
+                   data-en="Get AI-generated recommendations for premium dining, live events, and elegant nightlife plans."
+                   data-ar="احصل على اقتراحات ذكية للمطاعم الراقية والفعاليات المباشرة وخطط السهر الأنيقة.">
+                    Get AI-generated recommendations for premium dining, live events, and elegant nightlife plans.
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- DEMO PLANS -->
+<section class="demo-plans-section" id="demo-plans">
+    <div class="container">
+        <div class="section-heading reveal-up">
+            <span class="section-label translate-text"
+                  data-en="DEMO ITINERARIES"
+                  data-ar="خطط تجريبية">
+                DEMO ITINERARIES
+            </span>
+
+            <h2 class="section-title-main">
+                <span class="translate-text"
+                      data-en="Example Plans Created by AI"
+                      data-ar="نماذج لخطط أنشأها الذكاء الاصطناعي">
+                    Example Plans Created by AI
+                </span>
+            </h2>
+        </div><div class="demo-plans-stack">
+
+            <article class="demo-plan-card reveal-left">
+                <div class="demo-plan-top">
+                    <span class="demo-chip translate-text" data-en="Riyadh" data-ar="الرياض">Riyadh</span>
+                    <span class="demo-duration translate-text" data-en="1 Day" data-ar="يوم واحد">1 Day</span>
+                </div>
+
+                <h3 class="translate-text"
+                    data-en="Sports & Entertainment Plan"
+                    data-ar="خطة رياضية وترفيهية">
+                    Sports & Entertainment Plan
+                </h3>
+
+                <ul>
+                    <li class="translate-text" data-en="Morning city activity" data-ar="نشاط صباحي في المدينة">Morning city activity</li>
+                    <li class="translate-text" data-en="Lunch near entertainment district" data-ar="غداء بالقرب من منطقة الترفيه">Lunch near entertainment district</li>
+                    <li class="translate-text" data-en="Evening sports or live event" data-ar="فعالية رياضية أو عرض مباشر مساءً">Evening sports or live event</li>
+                    <li class="translate-text" data-en="Night return by smart transport" data-ar="العودة ليلًا عبر نقل ذكي">Night return by smart transport</li>
+                </ul>
+            </article>
+
+            <article class="demo-plan-card reveal-right">
+                <div class="demo-plan-top">
+                    <span class="demo-chip green-chip translate-text" data-en="Jeddah" data-ar="جدة">Jeddah</span>
+                    <span class="demo-duration translate-text" data-en="Evening" data-ar="مساء">Evening</span>
+                </div>
+
+                <h3 class="translate-text"
+                    data-en="Coastal Night Plan"
+                    data-ar="خطة أمسية ساحلية">
+                    Coastal Night Plan
+                </h3>
+
+                <ul>
+                    <li class="translate-text" data-en="Sunset waterfront stop" data-ar="توقف عند الواجهة البحرية وقت الغروب">Sunset waterfront stop</li>
+                    <li class="translate-text" data-en="Dinner recommendation" data-ar="اقتراح لعشاء مناسب">Dinner recommendation</li>
+                    <li class="translate-text" data-en="Live show or city activity" data-ar="عرض مباشر أو نشاط داخل المدينة">Live show or city activity</li>
+                    <li class="translate-text" data-en="Optimized route home" data-ar="مسار عودة مثالي">Optimized route home</li>
+                </ul>
+            </article>
+
+            <article class="demo-plan-card reveal-left">
+                <div class="demo-plan-top">
+                    <span class="demo-chip translate-text" data-en="AlUla" data-ar="العلا">AlUla</span>
+                    <span class="demo-duration translate-text" data-en="Cultural Day" data-ar="يوم ثقافي">Cultural Day</span>
+                </div>
+
+                <h3 class="translate-text"
+                    data-en="Quiet Heritage Visit"
+                    data-ar="زيارة تراثية هادئة">
+                    Quiet Heritage Visit
+                </h3>
+
+                <ul>
+                    <li class="translate-text" data-en="Historic destination start" data-ar="بداية من وجهة تاريخية">Historic destination start</li>
+                    <li class="translate-text" data-en="Guided museum experience" data-ar="تجربة متحف بإرشاد">Guided museum experience</li>
+                    <li class="translate-text" data-en="Café break with scenic stop" data-ar="استراحة في مقهى مع توقف في موقع جميل">Café break with scenic stop</li>
+                    <li class="translate-text" data-en="Sunset cultural route" data-ar="مسار ثقافي وقت الغروب">Sunset cultural route</li>
+                </ul>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/ai_assistant.js' %}"></script>
+{% endblock %}

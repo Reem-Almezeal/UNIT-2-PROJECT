@@ -1,0 +1,650 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+<!--
+Cities Page.
+
+Displays Saudi Arabia’s smart cities and future urban projects through
+an interactive experience focused on intelligent living, advanced
+mobility, sustainability, and digital infrastructure.
+
+Sections:
+    - Hero
+    - Moving strip
+    - Smart features
+    - Projects grid
+    - Statistics
+
+Features:
+    - Arabic and English support
+    - Responsive design
+    - Animated cards and videos
+    - Scroll reveal effects
+-->
+{% block title %}Smart Cities | KsaFuture{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/cities.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- Hero -->
+<div class="cities-hero-content reveal-up">
+    <span class="page-label translate-text"
+          data-en="SMART CITIES OF SAUDI ARABIA"
+          data-ar="المدن الذكية في المملكة العربية السعودية">
+        SMART CITIES OF SAUDI ARABIA
+    </span>
+
+    <h1 class="cities-hero-title">
+        <span class="translate-text"
+              data-en="Smart Cities"
+              data-ar="مدن ذكية">
+            Smart Cities
+        </span>
+
+        <span class="translate-text"
+              data-en="Now Shaping"
+              data-ar="ترسم اليوم">
+            Now Shaping
+        </span>
+
+        <span class="translate-text"
+              data-en="the Kingdom"
+              data-ar="ملامح المملكة">
+            the Kingdom
+        </span>
+    </h1>
+
+    <p class="cities-hero-text">
+        <span class="translate-text"
+              data-en="Explore the advanced districts, future city models, and urban transformations that are redefining life across Saudi Arabia."
+              data-ar="استكشف الأحياء المتقدمة، ونماذج المدن المستقبلية، والتحولات الحضرية التي تعيد تعريف الحياة في أنحاء المملكة.">
+            Explore the advanced districts, future city models, and urban transformations that are redefining life across Saudi Arabia.
+        </span>
+    </p>
+
+    <div class="cities-hero-buttons">
+        <a href="#projects-grid"
+           class="primary-btn translate-text"
+           data-en="Explore Projects"
+           data-ar="استكشف المشاريع">
+            Explore Projects
+        </a>
+
+        <a href="#smart-features"
+           class="secondary-btn translate-text"
+           data-en="What Makes a City Smart?"
+           data-ar="ما الذي يجعل المدينة ذكية؟">
+            What Makes a City Smart?
+        </a>
+    </div>
+</div>
+
+<!-- Strip -->
+<section class="cities-strip-section">
+    <div class="cities-strip">
+        <div class="cities-strip-track">
+            <span class="translate-text" data-en="AI INFRASTRUCTURE" data-ar="بنية تحتية ذكية">AI INFRASTRUCTURE</span>
+            <span class="translate-text" data-en="SMART MOBILITY" data-ar="تنقل ذكي">SMART MOBILITY</span>
+            <span class="translate-text" data-en="SUSTAINABLE DESIGN" data-ar="تصميم مستدام">SUSTAINABLE DESIGN</span>
+            <span class="translate-text" data-en="DIGITAL DISTRICTS" data-ar="أحياء رقمية">DIGITAL DISTRICTS</span>
+            <span class="translate-text" data-en="CONNECTED COMMUNITIES" data-ar="مجتمعات مترابطة">CONNECTED COMMUNITIES</span>
+            <span class="translate-text" data-en="FUTURE LIVING" data-ar="حياة مستقبلية">FUTURE LIVING</span>
+            <span class="translate-text" data-en="SMART INDUSTRY" data-ar="صناعة ذكية">SMART INDUSTRY</span>
+            <span class="translate-text" data-en="URBAN INNOVATION" data-ar="ابتكار حضري">URBAN INNOVATION</span>
+
+            <span class="translate-text" data-en="AI INFRASTRUCTURE" data-ar="بنية تحتية ذكية">AI INFRASTRUCTURE</span>
+            <span class="translate-text" data-en="SMART MOBILITY" data-ar="تنقل ذكي">SMART MOBILITY</span>
+            <span class="translate-text" data-en="SUSTAINABLE DESIGN" data-ar="تصميم مستدام">SUSTAINABLE DESIGN</span>
+            <span class="translate-text" data-en="DIGITAL DISTRICTS" data-ar="أحياء رقمية">DIGITAL DISTRICTS</span>
+            <span class="translate-text" data-en="CONNECTED COMMUNITIES" data-ar="مجتمعات مترابطة">CONNECTED COMMUNITIES</span>
+            <span class="translate-text" data-en="FUTURE LIVING" data-ar="حياة مستقبلية">FUTURE LIVING</span>
+            <span class="translate-text" data-en="SMART INDUSTRY" data-ar="صناعة ذكية">SMART INDUSTRY</span>
+            <span class="translate-text" data-en="URBAN INNOVATION" data-ar="ابتكار حضري">URBAN INNOVATION</span>
+        </div>
+    </div>
+</section>
+
+<!-- Features -->
+<section class="smart-features-section" id="smart-features">
+    <div class="container">
+        <div class="section-heading reveal-up">
+            <span class="section-label translate-text"
+                  data-en="WHAT DEFINES A SMART CITY"
+                  data-ar="ما الذي يعرّف المدينة الذكية">
+                WHAT DEFINES A SMART CITY
+            </span>
+
+            <h2 class="section-title-main">
+                <span class="translate-text"
+                      data-en="The New Urban Experience"
+                      data-ar="التجربة الحضارية الجديدة">
+                    The New Urban Experience
+                </span>
+            </h2>
+
+            <p class="section-desc">
+                <span class="translate-text"
+                      data-en="Saudi smart cities combine intelligent systems, advanced mobility, sustainability, and digital services to create a more connected, efficient, and modern lifestyle."
+                      data-ar="تجمع المدن الذكية في السعودية بين الأنظمة الذكية، والتنقل المتقدم، والاستدامة، والخدمات الرقمية لصنع أسلوب حياة أكثر ترابطًا وكفاءة وحداثة.">
+                    Saudi smart cities combine intelligent systems, advanced mobility, sustainability, and digital services to create a more connected, efficient, and modern lifestyle.
+                </span>
+            </p>
+        </div>
+
+        <div class="smart-features-grid">
+
+            <div class="smart-feature-card reveal-up ai-card">
+                <div class="smart-feature-overlay"></div>
+                <div class="smart-feature-content">
+                    <div class="smart-feature-icon">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+
+                    <h3 class="translate-text"
+                        data-en="AI Systems"
+                        data-ar="أنظمة الذكاء الاصطناعي">
+                        AI Systems
+                    </h3>
+                </div>
+            </div>
+
+            <div class="smart-feature-card reveal-up mobility-card">
+                <div class="smart-feature-overlay"></div>
+                <div class="smart-feature-content">
+                    <div class="smart-feature-icon">
+                        <i class="fa-solid fa-route"></i>
+                    </div>
+
+                    <h3 class="translate-text"
+                        data-en="Smart Mobility"
+                        data-ar="التنقل الذكي">
+                        Smart Mobility
+                    </h3>
+                </div>
+            </div>
+
+            <div class="smart-feature-card reveal-up sustainable-card">
+                <div class="smart-feature-overlay"></div>
+                <div class="smart-feature-content">
+                    <div class="smart-feature-icon">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+
+                    <h3 class="translate-text"
+                        data-en="Sustainable Design"
+                        data-ar="تصاميم مستدامة">
+                        Sustainable Design
+                    </h3>
+                </div>
+            </div>
+
+            <div class="smart-feature-card reveal-up digital-card">
+                <div class="smart-feature-overlay"></div>
+                <div class="smart-feature-content">
+                    <div class="smart-feature-icon">
+                        <i class="fa-solid fa-wifi"></i>
+                    </div>
+
+                    <h3 class="translate-text"
+                        data-en="Digital Living"
+                        data-ar="الحياة الرقمية">
+                        Digital Living
+                    </h3>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Projects Grid -->
+<section class="projects-grid-section" id="projects-grid">
+    <div class="container">
+        <div class="section-heading reveal-up">
+            <span class="section-label green-label translate-text"
+                  data-en="MAJOR SMART CITY PROJECTS"
+                  data-ar="أبرز مشاريع المدن الذكية">
+                MAJOR SMART CITY PROJECTS
+            </span>
+
+            <h2 class="section-title-main">
+                <span class="translate-text"
+                      data-en="Future Cities, Now Real"
+                      data-ar="مدن المستقبل... أصبحت واقعًا">
+                    Future Cities, Now Real
+                </span>
+            </h2>
+
+            <p class="section-desc">
+                <span class="translate-text"
+                      data-en="Explore the leading urban developments that now define smart living across Saudi Arabia."
+                      data-ar="استكشف أبرز المشاريع الحضارية التي اعادت تعريف الحياة الذكية في أنحاء المملكة.">
+                    Explore the leading urban developments that now define smart living across Saudi Arabia.
+                </span>
+            </p>
+        </div>
+
+        <div class="projects-grid">
+
+            <!-- NEOM -->
+            <article class="project-card reveal-up">
+                <div class="project-media">
+                    <video autoplay muted loop playsinline>
+                        <source src="{% static 'videos/neom.mp4' %}" type="video/mp4">
+                    </video>
+                    <div class="project-overlay"></div>
+
+                    <span class="project-video-chip translate-text"
+                          data-en="Live Preview"
+                          data-ar="مستقبل رقمي ">
+                        Live Preview
+                    </span>
+                </div>
+
+                <div class="project-body">
+                    <div class="project-top">
+                        <span class="project-badge translate-text"
+                              data-en="Smart Region"
+                              data-ar="منطقة ذكية">
+                            Smart Region
+                        </span>
+                        <span class="project-index">01</span>
+                    </div>
+
+                    <h3 class="translate-text"
+                        data-en="NEOM"
+                        data-ar="نيوم">
+                        NEOM
+                    </h3>
+
+                    <p class="translate-text"
+                       data-en="NEOM now stands as a global model of intelligent urban innovation, combining digital infrastructure, clean energy, and future-ready living."
+                       data-ar="تمثل نيوم اليوم نموذجًا عالميًا للابتكار الحضري الذكي، حيث تجمع بين البنية الرقمية والطاقة المتجددة والحياة  التقنية.">
+                        NEOM now stands as a global model of intelligent urban innovation, combining digital infrastructure, clean energy, and future-ready living.
+                    </p>
+
+                    <ul class="project-points">
+                        <li class="translate-text"
+                            data-en="Global benchmark for future-ready development"
+                            data-ar="معايير عالمية متطورة و مبتكرة ">
+                            Global benchmark for future-ready development
+                        </li>
+
+                        <li class="translate-text"
+                            data-en="Integrated mobility, sustainability, and innovation"
+                            data-ar="تكامل بين التنقل والاستدامة والابتكار">
+                            Integrated mobility, sustainability, and innovation
+                        </li>
+
+                        <li class="translate-text"
+                            data-en="Home to multiple advanced urban concepts"
+                            data-ar="تضم عدة مفاهيم حضارية متقدمة">
+                            Home to multiple advanced urban concepts
+                        </li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- The Line -->
+             <article class="project-card reveal-up">
+                <div class="project-media">
+                    <video autoplay muted loop playsinline>
+                        <source src="{% static 'videos/the_line.mp4' %}" type="video/mp4">
+                    </video>
+                    <div class="project-overlay"></div>
+
+                    <span class="project-video-chip green-chip translate-text"
+                          data-en="AI City"
+                          data-ar="مدينة ذكية">
+                        AI City
+                    </span>
+                </div>
+
+                <div class="project-body">
+                    <div class="project-top">
+                        <span class="project-badge green-badge translate-text"
+                              data-en="Linear Smart City"
+                              data-ar="مدينة ذكية خطية">
+                            Linear Smart City
+                        </span>
+                        <span class="project-index">02</span>
+                    </div>
+
+                    <h3 class="translate-text"
+                        data-en="The Line"
+                        data-ar="ذا لاين">
+                        The Line
+                    </h3>
+
+                    <p class="translate-text"
+                       data-en="The Line redefines urban life through a car-free, AI-powered city designed around people, speed, and sustainability."
+                       data-ar="تعيد ذا لاين تعريف الحياة الحضارية من خلال مدينة خالية من السيارات تعتمد على الذكاء الاصطناعي وتُصمم من اجل الحياة الرقمية والسرعة والاستدامة.">
+                        The Line redefines urban life through a car-free, AI-powered city designed around people, speed, and sustainability.
+                    </p>
+
+                    <ul class="project-points">
+                        <li class="translate-text"
+                            data-en="Fast movement without traffic congestion"
+                            data-ar="تنقل سريع دون ازدحام مروري">
+                            Fast movement without traffic congestion
+                        </li>
+
+                        <li class="translate-text"
+                            data-en="Human-centered planning and connected infrastructure"
+                            data-ar="تخطيط يتمحور حول الإنسان وبنية مترابطة">
+                            Human-centered planning and connected infrastructure
+                        </li>
+
+                        <li class="translate-text"
+                            data-en="A landmark example of next-generation city design"
+                            data-ar="أحد أبرز نماذج تصميم مدن الجيل القادم">
+                            A landmark example of next-generation city design
+                        </li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Riyadh -->
+            <article class="project-card reveal-up">
+                <div class="project-media">
+                    <video autoplay muted loop playsinline>
+                        <source src="{% static 'videos/riyadh.mp4' %}" type="video/mp4">
+                    </video>
+                    <div class="project-overlay"></div>
+
+                    <span class="project-video-chip translate-text"
+                          data-en="Smart Capital"
+                          data-ar="عاصمة ذكية">
+                        Smart Capital
+                    </span>
+                </div>
+
+                <div class="project-body">
+                    <div class="project-top">
+                        <span class="project-badge translate-text"
+                              data-en="Capital Transformation"
+                              data-ar="تحول العاصمة">
+                            Capital Transformation
+                        </span>
+                        <span class="project-index">03</span>
+                    </div>
+
+                    <h3 class="translate-text"
+                        data-en="Riyadh"
+                        data-ar="الرياض">
+                        Riyadh
+                    </h3>
+                    <p class="translate-text"
+                       data-en="Riyadh has transformed into one of the region’s leading smart capitals through intelligent mobility, connected infrastructure, and advanced urban redevelopment."
+                       data-ar="تحولت الرياض إلى واحدة من أبرز العواصم الذكية في المنطقة من خلال التنقل الذكي والبنية المترابطة والتطوير الحضاري المتقدم.">
+                        Riyadh has transformed into one of the region’s leading smart capitals through intelligent mobility, connected infrastructure, and advanced urban redevelopment.
+                    </p>
+
+                    <ul class="project-points">
+                        <li class="translate-text"
+                            data-en="Integrated smart mobility and infrastructure"
+                            data-ar="تنقل ذكي وبنية تحتية مترابطة">
+                            Integrated smart mobility and infrastructure
+                        </li>
+
+                        <li class="translate-text"
+                            data-en="Large-scale urban transformation"
+                            data-ar="تحول حضاري واسع النطاق">
+                            Large-scale urban transformation
+                        </li>
+
+                        <li class="translate-text"
+                            data-en="A leading model for intelligent city development"
+                            data-ar="نموذج رائد لتطوير المدن الذكية">
+                            A leading model for intelligent city development
+                        </li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- New Murabba -->
+            <article class="project-card reveal-up">
+                <div class="project-media">
+                    <video autoplay muted loop playsinline>
+                        <source src="{% static 'videos/newmurabba.mp4' %}" type="video/mp4">
+                    </video>
+                    <div class="project-overlay"></div>
+
+                    <span class="project-video-chip green-chip translate-text"
+                          data-en="Urban Future"
+                          data-ar="مستقبل حضاري">
+                        Urban Future
+                    </span>
+                </div>
+
+                <div class="project-body">
+                    <div class="project-top">
+                        <span class="project-badge green-badge translate-text"
+                              data-en="Future Urban District"
+                              data-ar="حي حضاري مستقبلي">
+                            Future Urban District
+                        </span>
+                        <span class="project-index">04</span>
+                    </div>
+
+                    <h3 class="translate-text"
+                        data-en="New Murabba"
+                        data-ar="المربع الجديد">
+                        New Murabba
+                    </h3>
+
+                    <p class="translate-text"
+                       data-en="New Murabba reshapes Riyadh through next-generation urban development, blending smart living, entertainment, and digital services."
+                       data-ar="يعيد المربع الجديد تشكيل الرياض من خلال تطوير حضاري حديث يجمع بين الحياة الذكية والترفيه والخدمات الرقمية.">
+                        New Murabba reshapes Riyadh through next-generation urban development, blending smart living, entertainment, and digital services.
+                    </p>
+
+                    <ul class="project-points">
+                        <li class="translate-text"
+                            data-en="Large-scale future district in Riyadh"
+                            data-ar="مربع مستقبلي ضخم في الرياض">
+                            Large-scale future district in Riyadh
+                        </li>
+
+                        <li class="translate-text"
+                            data-en="Integrated cultural and digital experiences"
+                            data-ar="تجارب ثقافية ورقمية متكاملة">
+                            Integrated cultural and digital experiences
+                        </li>
+                        <li class="translate-text"
+                            data-en="A symbol of the capital’s transformation"
+                            data-ar="رمز لتحول العاصمة">
+                            A symbol of the capital’s transformation
+                        </li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Oxagon -->
+            <article class="project-card reveal-up">
+                <div class="project-media">
+                    <video autoplay muted loop playsinline>
+                        <source src="{% static 'videos/oxagon.mp4' %}" type="video/mp4">
+                    </video>
+                    <div class="project-overlay"></div>
+
+                    <span class="project-video-chip translate-text"
+                          data-en="Smart Industry"
+                          data-ar="صناعة ذكية">
+                        Smart Industry
+                    </span>
+                </div>
+
+                <div class="project-body">
+                    <div class="project-top">
+                        <span class="project-badge translate-text"
+                              data-en="Industrial Smart City"
+                              data-ar="مدينة صناعية ذكية">
+                            Industrial Smart City
+                        </span>
+                        <span class="project-index">05</span>
+                    </div>
+
+                    <h3 class="translate-text"
+                        data-en="Oxagon"
+                        data-ar="أوكساجون">
+                        Oxagon
+                    </h3>
+
+                    <p class="translate-text"
+                       data-en="Oxagon has become a next-generation industrial and logistics hub where automation, sustainability, and intelligent systems shape the future of industry."
+                       data-ar="أصبحت أوكساجون مركزًا صناعيًا ولوجستيًا من الجيل القادم، حيث تشكل الأتمتة والاستدامة والأنظمة الذكية مستقبل الصناعة.">
+                        Oxagon has become a next-generation industrial and logistics hub where automation, sustainability, and intelligent systems shape the future of industry.
+                    </p>
+
+                    <ul class="project-points">
+                        <li class="translate-text"
+                            data-en="Advanced industrial ecosystems and smart logistics"
+                            data-ar="أنظمة صناعية متقدمة وخدمات لوجستية ذكية">
+                            Advanced industrial ecosystems and smart logistics
+                        </li>
+
+                        <li class="translate-text"
+                            data-en="Clean technology and future-focused operations"
+                            data-ar="تقنيات نظيفة وعمليات موجهة للمستقبل">
+                            Clean technology and future-focused operations
+                        </li>
+
+                        <li class="translate-text"
+                            data-en="A leading model for intelligent industrial development"
+                            data-ar="نموذج رائد للتطوير الصناعي الذكي">
+                            A leading model for intelligent industrial development
+                        </li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- MBS Nonprofit City -->
+            <article class="project-card reveal-up">
+                <div class="project-media">
+                    <video autoplay muted loop playsinline>
+                        <source src="{% static 'videos/mbs_city.mp4' %}" type="video/mp4">
+                    </video>
+                    <div class="project-overlay"></div>
+
+                    <span class="project-video-chip green-chip translate-text"
+                          data-en="Smart Community"
+                          data-ar="مجتمع ذكي">
+                        Smart Community
+                    </span>
+                </div>
+
+                <div class="project-body">
+                    <div class="project-top">
+                        <span class="project-badge green-badge translate-text"
+                              data-en="Community Smart City"
+                              data-ar="مدينة مجتمعية ذكية">
+                            Community Smart City
+                        </span>
+                        <span class="project-index">06</span>
+                    </div>
+
+                    <h3 class="translate-text"
+                        data-en="Mohammed Bin Salman Nonprofit City"
+                        data-ar="مدينة محمد بن سلمان غير الربحية">
+                        Mohammed Bin Salman Nonprofit City
+                    </h3>
+
+                    <p class="translate-text"
+                       data-en="Mohammed Bin Salman Nonprofit City presents a new model for intelligent, nonprofit, and community-driven urban living built around education and innovation."
+                       data-ar="تقدم مدينة محمد بن سلمان غير الربحية نموذجًا جديدًا للحياة الحضارية الذكية وغير الربحية، المبنية حول التعليم والابتكار والمجتمع.">
+                        Mohammed Bin Salman Nonprofit City presents a new model for intelligent, nonprofit, and community-driven urban living built around education and innovation.
+                    </p>
+
+                    <ul class="project-points">
+                        <li class="translate-text"
+                            data-en="The world’s first nonprofit smart city"
+                            data-ar="أول مدينة ذكية غير ربحية في العالم">
+                            The world’s first nonprofit smart city
+                        </li>
+
+                        <li class="translate-text"
+                            data-en="Focused on innovation, education, and quality of life"
+                            data-ar="تركز على الابتكار والتعليم وجودة الحياة">
+                            Focused on innovation, education, and quality of life
+                        </li>
+
+                        <li class="translate-text"
+                            data-en="Advanced digital services supporting daily life"
+                            data-ar="خدمات رقمية متقدمة تدعم الحياة اليومية">
+                            Advanced digital services supporting daily life
+                        </li>
+                    </ul>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- Stats -->
+<section class="cities-stats-section">
+    <div class="container">
+        <div class="section-heading reveal-up">
+            <span class="section-label green-label translate-text"
+                  data-en="SMART CITY IMPACT"
+                  data-ar="أثر المدن الذكية">
+                SMART CITY IMPACT
+            </span>
+
+            <h2 class="section-title-main">
+                <span class="translate-text"data-en="A New Urban Standard"
+                      data-ar="الاثار الناتجة  ">
+                    A New Urban Standard
+                </span>
+            </h2>
+        </div>
+
+        <div class="cities-stats-grid">
+            <div class="stat-card reveal-up">
+                <h3>6</h3>
+                <p class="translate-text"
+                   data-en="Major smart city experiences"
+                   data-ar="تجارب رئيسية للمدن الذكية">
+                    Major smart city experiences
+                </p>
+            </div>
+
+            <div class="stat-card reveal-up">
+                <h3>AI</h3>
+                <p class="translate-text"
+                   data-en="Integrated into daily systems"
+                   data-ar="مدمجة في الأنظمة اليومية">
+                    Integrated into daily systems
+                </p>
+            </div>
+
+            <div class="stat-card reveal-up">
+                <h3>0 Cars</h3>
+                <p class="translate-text"
+                   data-en="Inside next-generation city models"
+                   data-ar="في بعض المدن المستقبلية">
+                    Inside next-generation city models
+                </p>
+            </div>
+
+            <div class="stat-card reveal-up">
+                <h3>24/7</h3>
+                <p class="translate-text"
+                   data-en="Connected urban services"
+                   data-ar="خدمات حضارية مترابطة">
+                    Connected urban services
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/cities.js' %}"></script>
+{% endblock %}

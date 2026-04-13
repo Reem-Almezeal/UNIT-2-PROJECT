@@ -1,0 +1,443 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Transport | KsaFuture{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/transport.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- HERO -->
+<section class="transport-hero-section">
+    <div class="container">
+        <div class="transport-hero-content reveal-up">
+            <span class="page-label translate-text"
+                  data-en="INTELLIGENT TRANSPORT ACROSS THE KINGDOM"
+                  data-ar="النقل الذكي في أنحاء المملكة">
+                INTELLIGENT TRANSPORT ACROSS THE KINGDOM
+            </span>
+
+            <h1 class="transport-hero-title">
+                <span class="translate-text"
+                      data-en="Movement"
+                      data-ar="تنقل">
+                    Movement
+                </span>
+
+                <span class="translate-text"
+                      data-en="Without Friction"
+                      data-ar="بلا عوائق">
+                    Without Friction
+                </span>
+            </h1>
+
+            <p class="transport-hero-text">
+                <span class="translate-text"
+                      data-en="By 2034, transport in Saudi Arabia is no longer defined only by roads and stations. It is now shaped by live data, connected systems, faster transit, cleaner mobility, and smarter movement between districts, cities, and national corridors."
+                      data-ar="بحلول عام 2034، لم يعد النقل في السعودية يعتمد فقط على الطرق والمحطات، بل أصبح يتشكل عبر البيانات الحية والأنظمة المترابطة والتنقل الأسرع والحركة الأنظف والانتقال الأذكى بين الأحياء والمدن والممرات الوطنية.">
+                    By 2034, transport in Saudi Arabia is no longer defined only by roads and stations. It is now shaped by live data, connected systems, faster transit, cleaner mobility, and smarter movement between districts, cities, and national corridors.
+                </span>
+            </p>
+
+            <div class="transport-hero-actions">
+                <a href="#mobility-systems"
+                   class="primary-btn translate-text"
+                   data-en="Explore Systems"
+                   data-ar="استكشف الأنظمة">
+                    Explore Systems
+                </a>
+
+                <a href="#featured-transport"
+                   class="secondary-btn translate-text"
+                   data-en="View Key Projects"
+                   data-ar="اعرض المشاريع الرئيسية">
+                    View Key Projects
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- LIVE MOBILITY SYSTEMS -->
+<section class="mobility-systems-section" id="mobility-systems">
+    <div class="container">
+        <div class="section-heading reveal-up">
+            <span class="section-label translate-text"
+                  data-en="LIVE MOBILITY SYSTEMS"
+                  data-ar="أنظمة التنقل الحية">
+                LIVE MOBILITY SYSTEMS
+            </span>
+
+            <h2 class="section-title-main">
+                <span class="translate-text"
+                      data-en="A Connected Mobility Network"
+                      data-ar="شبكة تنقل مترابطة">
+                    A Connected Mobility Network
+                </span>
+            </h2>
+
+            <p class="section-desc">
+                <span class="translate-text"
+                      data-en="Transport now functions as one intelligent ecosystem where transit, roads, rail, airports, and digital control systems work together in real time."
+                      data-ar="يعمل النقل الآن كمنظومة ذكية واحدة، حيث تتكامل وسائل النقل والطرق والسكك الحديدية والمطارات وأنظمة التحكم الرقمية معًا بشكل لحظي.">
+                    Transport now functions as one intelligent ecosystem where transit, roads, rail, airports, and digital control systems work together in real time.
+                </span>
+            </p>
+        </div>
+
+        <div class="mobility-system-list">
+
+            <article class="mobility-system-card reveal-up">
+                <div class="system-icon"><i class="fa-solid fa-train-subway"></i></div>
+                <div class="system-content">
+                    <h3 class="translate-text"
+                        data-en="Urban Metro Networks"
+                        data-ar="شبكات المترو حضارية">
+                        Urban Metro Networks
+                    </h3>
+
+                    <p class="translate-text"
+                       data-en="Metro systems now support more efficient city movement through connected stations, smarter access, and improved district coverage."
+                       data-ar="تدعم أنظمة المترو الآن حركة المدن بكفاءة أعلى عبر محطات مترابطة ووصول أذكى وتغطية أفضل للأحياء.">
+                        Metro systems now support more efficient city movement through connected stations, smarter access, and improved district coverage.
+                    </p>
+                </div>
+                <div class="system-status connected translate-text"
+                     data-en="Integrated"
+                     data-ar="متكامل">
+                    Integrated
+                </div>
+            </article>
+
+            <article class="mobility-system-card reveal-up">
+                <div class="system-icon"><i class="fa-solid fa-train"></i></div>
+                <div class="system-content">
+                    <h3 class="translate-text"
+                        data-en="High-Speed Rail"
+                        data-ar="قطار سريع">
+                        The Rail
+                    </h3>
+
+                    <p class="translate-text"
+                       data-en="Rail travel now offers a faster, smoother alternative for long-distance movement between major cities and strategic destinations."
+                       data-ar="يوفر السفر بالقطار الآن خيارًا أسرع وأكثر سلاسة للتنقل لمسافات طويلة بين المدن الكبرى والوجهات الاستراتيجية.">
+                        Rail travel now offers a faster, smoother alternative for long-distance movement between major cities and strategic destinations.
+                    </p>
+                </div>
+                <div class="system-status live translate-text"
+                     data-en="High-Speed"
+                     data-ar="فائق السرعة">
+                    High-Speed
+                </div>
+            </article>
+
+            <article class="mobility-system-card reveal-up">
+                <div class="system-icon"><i class="fa-solid fa-road"></i></div>
+                <div class="system-content">
+                    <h3 class="translate-text"
+                        data-en="AI Traffic Systems"
+                        data-ar="أنظمة المرور الذكية">
+                        AI Traffic Systems
+                    </h3>
+
+                    <p class="translate-text"
+                       data-en="Road networks now respond dynamically to live traffic conditions using prediction, signal coordination, and intelligent routing."
+                       data-ar="تستجيب شبكات الطرق الآن ديناميكيًا لحركة المرور الحية باستخدام التنبؤ وتنسيق الإشارات والتوجيه الذكي.">Road networks now respond dynamically to live traffic conditions using prediction, signal coordination, and intelligent routing.
+                    </p>
+                </div>
+                <div class="system-status ai translate-text"
+                     data-en="Predictive"
+                     data-ar="تنبؤي">
+                    Predictive
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- FEATURED SYSTEMS -->
+<section class="featured-transport-section" id="featured-transport">
+    <div class="container">
+        <div class="section-heading reveal-up">
+            <span class="section-label translate-text"
+                  data-en="FEATURED SYSTEMS"
+                  data-ar="الأنظمة البارزة">
+                FEATURED SYSTEMS
+            </span>
+
+            <h2 class="section-title-main">
+                <span class="translate-text"
+                      data-en="What Powers Movement in 2034"
+                      data-ar="ما الذي يشغّل الحركة في 2034">
+                    What Powers Movement in 2034
+                </span>
+            </h2>
+
+            <p class="section-desc">
+                <span class="translate-text"
+                      data-en="These systems reflect how transport in Saudi Arabia now connects speed, intelligence, accessibility, and long-term sustainability."
+                      data-ar="تعكس هذه الأنظمة كيف أصبح النقل في السعودية اليوم يربط بين السرعة والذكاء وسهولة الوصول والاستدامة طويلة المدى.">
+                    These systems reflect how transport in Saudi Arabia now connects speed, intelligence, accessibility, and long-term sustainability.
+                </span>
+            </p>
+        </div>
+
+        <div class="featured-transport-stack">
+
+            <article class="transport-feature-card reveal-up">
+                <div class="transport-feature-media">
+                    <img src="{% static 'images/riyadh_future.png' %}" alt="Riyadh Metro">
+                </div>
+
+                <div class="transport-feature-body">
+                    <span class="feature-chip translate-text"
+                          data-en="Urban Transit"
+                          data-ar="نقل حضاري">
+                        Urban Transit
+                    </span>
+
+                    <h3 class="translate-text"
+                        data-en="Riyadh Metro"
+                        data-ar="مترو الرياض">
+                        Riyadh Metro
+                    </h3>
+
+                    <p class="translate-text"
+                       data-en="Riyadh now moves through a more connected transit structure where urban access, public mobility, and district-to-district flow are significantly more efficient."
+                       data-ar="تتحرك الرياض الآن عبر بنية نقل أكثر ترابطًا، حيث أصبح الوصول الحضري والتنقل العام والحركة بين الأحياء أكثر كفاءة بشكل ملحوظ.">Riyadh now moves through a more connected transit structure where urban access, public mobility, and district-to-district flow are significantly more efficient.
+                    </p>
+
+                    <ul>
+                        <li class="translate-text" data-en="Stronger city connectivity" data-ar="ترابط أقوى داخل المدينة">Stronger city connectivity</li>
+                        <li class="translate-text" data-en="More efficient daily transit" data-ar="تنقل يومي أكثر كفاءة">More efficient daily transit</li>
+                        <li class="translate-text" data-en="Reduced pressure on road movement" data-ar="ضغط أقل على حركة الطرق">Reduced pressure on road movement</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="transport-feature-card reveal-up">
+                <div class="transport-feature-media">
+                    <img src="{% static 'images/smart_traffic.png' %}" alt="Smart Traffic Systems">
+                </div>
+
+                <div class="transport-feature-body">
+                    <span class="feature-chip translate-text"
+                          data-en="Road Intelligence"
+                          data-ar=" طرق ذكية">
+                        Road Intelligence
+                    </span>
+
+                    <h3 class="translate-text"
+                        data-en="Smart Traffic Systems"
+                        data-ar="أنظمة المرور الذكية ">
+                        Smart Traffic Systems
+                    </h3>
+
+                    <p class="translate-text"
+                       data-en="Roads are now supported by intelligent control systems that improve flow, reduce congestion, and help movement adapt to changing conditions in real time."
+                       data-ar="تدعم الطرق الآن أنظمة تحكم ذكية تحسن الانسيابية وتقلل الازدحام وتساعد الحركة على التكيف مع الظروف المتغيرة لحظيًا.">
+                        Roads are now supported by intelligent control systems that improve flow, reduce congestion, and help movement adapt to changing conditions in real time.
+                    </p>
+
+                    <ul><li class="translate-text" data-en="Live traffic response" data-ar="استجابة مرورية لحظية">Live traffic response</li>
+                        <li class="translate-text" data-en="Smarter route management" data-ar="إدارة أذكى للمسارات">Smarter route management</li>
+                        <li class="translate-text" data-en="Improved network resilience" data-ar="مرونة أعلى للشبكة">Improved network resilience</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="transport-feature-card reveal-up">
+                <div class="transport-feature-media">
+                    <img src="{% static 'images/jeddah_riyadh_rail.png' %}" alt="Jeddah Riyadh High-Speed Rail">
+                </div>
+
+                <div class="transport-feature-body">
+                    <span class="feature-chip green-chip translate-text"
+                          data-en="High-Speed Travel"
+                          data-ar="سفر سريع">
+                        High-Speed Travel
+                    </span>
+
+                    <h3 class="translate-text"
+                        data-en="Jeddah–Riyadh High-Speed Rail"
+                        data-ar="قطار يربط بين جدة والرياض">
+                        Jeddah–Riyadh High-Speed Rail
+                    </h3>
+
+                    <p class="translate-text"
+                       data-en="A future high-speed rail corridor between Jeddah and Riyadh is expected to transform long-distance travel and reduce travel time significantly."
+                       data-ar="من المتوقع أن يغيّر ممر القطار فائق السرعة المستقبلي بين جدة والرياض السفر لمسافات طويلة ويقلل وقت الرحلة بشكل كبير.">
+                        A future high-speed rail corridor between Jeddah and Riyadh is expected to transform long-distance travel and reduce travel time significantly.
+                    </p>
+
+                    <ul>
+                        <li class="translate-text" data-en="Faster travel between major cities" data-ar="سفر أسرع بين المدن الكبرى">Faster travel between major cities</li><li class="translate-text" data-en="Reduced pressure on highways" data-ar="ضغط أقل على الطرق السريعة">Reduced pressure on highways</li>
+                        <li class="translate-text" data-en="Stronger national connectivity" data-ar="ترابط وطني أقوى">Stronger national connectivity</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="transport-feature-card reveal-up">
+                <div class="transport-feature-media">
+                    <img src="{% static 'images/jeddah_metro.png' %}" alt="Jeddah Metro">
+                </div>
+
+                <div class="transport-feature-body">
+                    <span class="feature-chip translate-text"
+                          data-en="Urban Mobility"
+                          data-ar="تنقل حضاري">
+                        Urban Mobility
+                    </span>
+
+                    <h3 class="translate-text"
+                        data-en="Jeddah Metro Revival"
+                        data-ar="إحياء مترو جدة">
+                        Jeddah Metro Revival
+                    </h3>
+
+                    <p class="translate-text"
+                       data-en="Jeddah’s metro project is expected to return with a renewed transport vision focused on smarter city movement and reduced congestion."
+                       data-ar="من المتوقع أن يعود مشروع مترو جدة برؤية نقل متجددة تركز على حركة مدينة أذكى وازدحام أقل.">
+                        Jeddah’s metro project is expected to return with a renewed transport vision focused on smarter city movement and reduced congestion.
+                    </p>
+
+                    <ul>
+                        <li class="translate-text" data-en="Improved public transport inside Jeddah" data-ar="تحسين النقل العام داخل جدة">Improved public transport inside Jeddah</li>
+                        <li class="translate-text" data-en="Less traffic congestion" data-ar="ازدحام مروري أقل">Less traffic congestion</li>
+                        <li class="translate-text" data-en="Better urban mobility" data-ar="تنقل حضري أفضل">Better urban mobility</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="transport-feature-card reveal-up">
+                <div class="transport-feature-media">
+                    <img src="{% static 'images/gulf_rail.png' %}" alt="Regional Rail Connections">
+                </div>
+
+                <div class="transport-feature-body">
+                    <span class="feature-chip green-chip translate-text"
+                          data-en="Regional Connectivity"
+                          data-ar="ترابط إقليمي">
+                        Regional Connectivity
+                    </span>
+
+                    <h3 class="translate-text"
+                        data-en="Rail Links Across Saudi Arabia & The Gulf"
+                        data-ar="ربط السكك الحديدية عبر السعودية والخليج">
+                        Rail Links Across Saudi Arabia & The Gulf
+                    </h3>
+
+                    <p class="translate-text"
+                       data-en="Railway corridors are expected to expand between Saudi cities and neighboring Gulf countries, creating a larger regional transport network."
+                       data-ar="من المتوقع أن تتوسع ممرات السكك الحديدية بين المدن السعودية ودول الخليج المجاورة، لتشكّل شبكة نقل إقليمية أكبر.">
+                        Railway corridors are expected to expand between Saudi cities and neighboring Gulf countries, creating a larger regional transport network.
+                    </p>
+
+                    <ul>
+                        <li class="translate-text" data-en="Better national rail coverage" data-ar="تغطية وطنية أفضل للسكك الحديدية">Better national rail coverage</li>
+                        <li class="translate-text" data-en="Future Gulf connectivity" data-ar="ترابط خليجي مستقبلي">Future Gulf connectivity</li>
+                        <li class="translate-text" data-en="Stronger regional movement" data-ar="حركة إقليمية أقوى">Stronger regional movement</li></ul>
+                </div>
+            </article>
+
+            <article class="transport-feature-card reveal-up">
+                <div class="transport-feature-media">
+                    <img src="{% static 'images/smart_bus.png' %}" alt="Smart Public Transport">
+                </div>
+
+                <div class="transport-feature-body">
+                    <span class="feature-chip translate-text"
+                          data-en="Smart Cities"
+                          data-ar="مدن ذكية">
+                        Smart Cities
+                    </span>
+
+                    <h3 class="translate-text"
+                        data-en="Smarter Public Transport"
+                        data-ar="نقل عام أكثر ذكاءً">
+                        Smarter Public Transport
+                    </h3>
+
+                    <p class="translate-text"
+                       data-en="Public buses and smart transport systems inside cities will become more connected through live tracking, digital access, and intelligent routing."
+                       data-ar="ستصبح الحافلات العامة وأنظمة النقل الذكية داخل المدن أكثر ترابطًا عبر التتبع اللحظي والوصول الرقمي والتوجيه الذكي.">
+                        Public buses and smart transport systems inside cities will become more connected through live tracking, digital access, and intelligent routing.
+                    </p>
+
+                    <ul>
+                        <li class="translate-text" data-en="Real-time bus tracking" data-ar="تتبع الحافلات لحظيًا">Real-time bus tracking</li>
+                        <li class="translate-text" data-en="Smarter urban mobility" data-ar="تنقل حضري أذكى">Smarter urban mobility</li>
+                        <li class="translate-text" data-en="Better passenger experience" data-ar="تجربة ركاب أفضل">Better passenger experience</li>
+                    </ul>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- STATS -->
+<section class="transport-stats-section">
+    <div class="container">
+        <div class="section-heading reveal-up">
+            <span class="section-label translate-text"
+                  data-en="SYSTEM PERFORMANCE"
+                  data-ar="أداء المنظومة">
+                SYSTEM PERFORMANCE
+            </span>
+
+            <h2 class="section-title-main">
+                <span class="translate-text"
+                      data-en="Mobility at National Scale"
+                      data-ar="جوانب التطور   ">
+                    Mobility at National Scale
+                </span>
+            </h2>
+        </div>
+
+        <div class="transport-stats-dashboard">
+            <div class="transport-stat-box reveal-up">
+                <h3>24/7</h3>
+                <p class="translate-text"
+                   data-en="Real-time transport awareness"
+                   data-ar="وعي لحظي بالنقل">
+                    Real-time transport awareness
+                </p>
+            </div>
+
+            <div class="transport-stat-box reveal-up">
+                <h3>AI</h3>
+                <p class="translate-text"
+                   data-en="Smarter traffic coordination"
+                   data-ar="تنسيق مروري أذكى">
+                    Smarter traffic coordination
+                </p>
+            </div>
+
+            <div class="transport-stat-box reveal-up">
+                <h3 class="translate-text" data-en="Fast" data-ar="سريع">Fast</h3>
+                <p class="translate-text"
+                   data-en="Better intercity movement"
+                   data-ar="تنقل أفضل بين المدن">
+                    Better intercity movement
+                </p>
+            </div>
+
+            <div class="transport-stat-box reveal-up">
+                <h3 class="translate-text" data-en="Clean" data-ar="نظيف">Clean</h3>
+                <p class="translate-text"
+                   data-en="More sustainable mobility systems"
+                   data-ar="أنظمة تنقل أكثر استدامة">
+                    More sustainable mobility systems
+                </p>
+            </div>
+        </div>
+    </div>
+</section>{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/transport.js' %}"></script>
+{% endblock %}
